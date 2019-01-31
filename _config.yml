@@ -87,7 +87,7 @@ simple_jekyll_search:
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "追求多元平衡生活，既能朝九晚五，又能浪迹天涯"
-sidebar-avatar: /img/root/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
