@@ -1,9 +1,13 @@
 ---
+layout: post
 title: python命令行参数解析库
+subtitle: "学会善用python官方标准库"
 date: 2018-06-25 22:28:25
-tags: python
-categories: 技术积累
-copyright: true
+author: "Morgan"
+header-img: "img/post-bg-2015.jpg"
+tags: 
+    - python
+    - 后端开发
 ---
 
 ### 简介
