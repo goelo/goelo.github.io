@@ -1,0 +1,144 @@
+# Site settings
+title: Morgan Blog
+SEOTitle: 程序员Morgan | Morgan Blog
+header-img: img/root/home-bg.jpg
+email: goelo@163.com
+description: ""
+keyword: "程序员, Morgan的博客, Morgan Blog, 博客, 个人网站, 自动化, 工程师, 机器人"
+url: "https://morgansays.com"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+# Publish posts or collection documents with a future date.
+future: true
+
+# SNS settings
+RSS: false
+CSDN_username:     morgan928
+zhihu_username:     kao-pu-de-nan-yin
+github_username:    goelo
+#twitter_username:   GJXS2017
+#facebook_username:  username
+#music163_username:  home?id=261616078
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: false                           # if you want to customize anchor. check out line:181 of `post.html`
+timezone: CN
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+plugins: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Disqus settings
+# disqus_username: gjxs
+# livere_uid: MTAyMC8zNzIzMy8xMzc2Nw==
+
+gitalk:
+    enable: true
+    owner: goelo
+    repo: blog_comments
+    clientID: 443403e11857113ad3a7
+    clientSecret: dec593145d3259bc7fe39c8662a8c9d2c7e53d34
+    admin: goelo
+
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: false
+    # 最多显示多少条搜索结果
+    limit: 10
+
+# Analytics settings
+# Baidu Analytics
+#ba_track_id: 5e4a91c21c
+#ba_track_id:8db676af20
+
+# Google Analytics
+#ga_track_id: 'UA-120526213-1'            # Format: UA-xxxxxx-xx
+#ga_domain: auto
+
+# Baidu Analytics
+#baidu_analytics: 'f449fbb4d143d156c197d3a7a38a779d'
+
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "追求多元平衡生活，既能朝九晚五，又能浪迹天涯"
+sidebar-avatar: /img/root/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: true
+
+# Friends
+friends: [
+    {
+    #     title: "Su",
+    #     href: "http://su.gallery/"
+    # },{
+        title: "Github",
+        href: "https://github.com/"
+    },{
+    #    title: "前端外刊评论",
+    #    href: "http://qianduan.guru/"
+    #},{
+    #    title: "天镶的博客",
+    #    href: "http://lingyu.wang/"
+    #},{
+    #    title: "Luke 的自留地",
+    #    href: "http://hmqk1995.github.io"
+    #},{
+    #    title: "Ebn's Blog",
+    #    href: "http://ebnbin.com/"
+    #},{
+    #    title: "SmdCn's Blog",
+    #    href: "http://blog.smdcn.net"
+    #},{
+    #    title: "David's Game",
+    #    href: "https://www.ruoyaowu.com/"
+    #},{
+    #    title: "DHong Say",
+    #    href: "http://dhong.co"
+    #},{
+    #    title: "尹峰以为",
+    #    href: "http://ingf.github.io/"
+    #},{
+    #    title: "解旻的博客",
+    #    href: "http://xieminis.me/"
+    }
+]
