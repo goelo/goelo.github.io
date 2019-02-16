@@ -49,16 +49,16 @@ kramdown:
 
 
 # Disqus settings
-# disqus_username: gjxs
-# livere_uid: MTAyMC8zNzIzMy8xMzc2Nw==
+ disqus_username: morgan928
+ # livere_uid: MTAyMC8zNzIzMy8xMzc2Nw==
 
-gitalk:
-    enable: true
-    owner: goelo
-    repo: blog_comments
-    clientID: 443403e11857113ad3a7
-    clientSecret: dec593145d3259bc7fe39c8662a8c9d2c7e53d34
-    admin: goelo
+# gitalk:
+    # enable: true
+    # owner: goelo
+    # repo: blog_comments
+    # clientID: 443403e11857113ad3a7
+    # clientSecret: dec593145d3259bc7fe39c8662a8c9d2c7e53d34
+    # admin: goelo
 
 # ---------------- #
 #      Search      #
@@ -70,16 +70,13 @@ simple_jekyll_search:
     limit: 10
 
 # Analytics settings
-# Baidu Analytics
-#ba_track_id: 5e4a91c21c
-#ba_track_id:8db676af20
 
 # Google Analytics
 ga_track_id: 'UA-134613157-1'            # Format: UA-xxxxxx-xx
 ga_domain: morgansays.com
 
 # Baidu Analytics
-baidu_analytics: 'efbd28db78c4b9e34b146ca7acb84ada'
+# baidu_analytics: 'efbd28db78c4b9e34b146ca7acb84ada'
 
 
 
