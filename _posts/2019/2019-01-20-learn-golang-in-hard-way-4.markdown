@@ -6,6 +6,8 @@ author: Morgan
 tags: 
     - Golang
     - 语言教程
+header-img: "img/go-bg.jpg"
+catalog: true
 ---
 
 这是Go语言学习笔记的第四篇
