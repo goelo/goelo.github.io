@@ -49,17 +49,17 @@ kramdown:
 
 
 # Disqus settings
-comments: true
-disqus_username: disqus_morgan928
+# comments: true
+# disqus_username: disqus_morgan928
 # livere_uid: MTAyMC8zNzIzMy8xMzc2Nw==
 
-# gitalk:
-    # enable: true
-    # owner: goelo
-    # repo: blog_comments
-    # clientID: 443403e11857113ad3a7
-    # clientSecret: dec593145d3259bc7fe39c8662a8c9d2c7e53d34
-    # admin: goelo
+gitalk:
+    enable: true
+    owner: goelo
+    repo: blog_comments
+    clientID: 443403e11857113ad3a7
+    clientSecret: dec593145d3259bc7fe39c8662a8c9d2c7e53d34
+    admin: goelo
 
 # ---------------- #
 #      Search      #
