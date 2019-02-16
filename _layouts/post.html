@@ -55,7 +55,8 @@ layout: default
                 {% if site.disqus_username %}
                 <!-- disqus 评论框 start -->
                 <div class="comment">
-                    <div id="disqus_thread" class="disqus-thread"></div>
+                    {% include disqus_comments.html %}
+                    <!-- <div id="disqus_thread" class="disqus-thread"></div>-->
                 </div>
                 <!-- disqus 评论框 end -->
                 {% endif %}
@@ -127,9 +128,9 @@ layout: default
 <!-- 网易云跟帖JS代码 end -->
 {% endif %}
 
-
+<!--
 {% if site.disqus_username %}
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+ disqus 公共JS代码 start (一个网页只需插入一次) 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "{{site.disqus_username}}";
@@ -142,9 +143,9 @@ layout: default
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- disqus 公共JS代码 end -->
+ disqus 公共JS代码 end
 {% endif %}
-
+-->
 
 {% if site.anchorjs %}
 <!-- async load function -->
