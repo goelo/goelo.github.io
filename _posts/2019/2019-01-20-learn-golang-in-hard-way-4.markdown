@@ -196,3 +196,33 @@ func main() {
 ```
 
 上面例子涉及到了map的声明、初始化、赋值，查找。
+
+##### 变量声明
+
+第8行声明了一个map, 其中变量名为bookDB, map的键类型为string, 存放的值类型为bookInfo.
+
+##### 创建
+
+用内置函数`make()`创建一个map，像第9行代码。也可以在创建的时候指定map的存储能力：
+
+`bookDB = make(map[string]bookInfo, 100)`, 同样也可以在创建map的时候初始化：
+
+`bookDB = map[string]bookInfo{"1": bookInfo{"1", "Harry Potter", "$20"}}`
+
+##### 删除元素
+
+使用内置函数`delete()`来删除map中的元素。例如:`delete(bookDB, "123")`，如果“123”不存在，则什么都不会发生，如果存在，则会删除key为“123”的value。
+
+##### 查找元素
+
+go语言中查找map中值非常方便，代码如下：
+
+```go
+value, ok := bookInfo["123"]
+if ok {
+    //找到了，处理找到的value
+}
+```
+
+本文中的代码均整合上传至github, 请参考[源文件](https://github.com/goelo/LearnGolangTheHardWay/blob/master/src/)
+
