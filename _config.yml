@@ -49,8 +49,8 @@ kramdown:
 
 
 # Disqus settings
- disqus_username: morgan928
- # livere_uid: MTAyMC8zNzIzMy8xMzc2Nw==
+disqus_username: disqus_morgan928
+# livere_uid: MTAyMC8zNzIzMy8xMzc2Nw==
 
 # gitalk:
     # enable: true
