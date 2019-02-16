@@ -4,7 +4,7 @@ SEOTitle: 程序员Morgan | Morgan Blog
 header-img: img/root/home-bg.jpg
 email: goelo@163.com
 description: ""
-keyword: "程序员, Morgan的博客, Morgan Blog, 博客, 个人网站, 自动化, 工程师, 机器人"
+keyword: "程序员, Morgan的博客, Morgan Blog, 博客, 个人网站, 自动化, 工程师"
 url: "https://morgansays.com"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -75,11 +75,11 @@ simple_jekyll_search:
 #ba_track_id:8db676af20
 
 # Google Analytics
-#ga_track_id: 'UA-120526213-1'            # Format: UA-xxxxxx-xx
-#ga_domain: auto
+ga_track_id: 'UA-134613157-1'            # Format: UA-xxxxxx-xx
+ga_domain: morgansays.com
 
 # Baidu Analytics
-#baidu_analytics: 'f449fbb4d143d156c197d3a7a38a779d'
+baidu_analytics: 'efbd28db78c4b9e34b146ca7acb84ada'
 
 
 
