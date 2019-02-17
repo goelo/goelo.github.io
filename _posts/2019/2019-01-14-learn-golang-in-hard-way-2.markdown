@@ -5,7 +5,8 @@ date: 2019-01-14 20:56:20
 author: Morgan
 tags: 
     - 语言教程
-    - Golang	
+    - Golang
+catalog: true	
 ---
 
 这是Go语言学习笔记的第二篇文章。

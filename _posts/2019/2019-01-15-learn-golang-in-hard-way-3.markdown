@@ -6,6 +6,7 @@ author: Morgan
 tags: 
     - Golang
     - 语言教程
+catalog: true
 ---
 
 这是Go语言学习笔记第三篇。

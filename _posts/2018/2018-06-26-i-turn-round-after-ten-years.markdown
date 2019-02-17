@@ -7,6 +7,7 @@ author: Morgan
 tags: 
     - 个人成长
     - 自我管理
+catalog: true
 ---
 
 > 与其获得别人的肯定，我更喜欢自己内心世界的笃定

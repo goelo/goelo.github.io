@@ -6,6 +6,7 @@ author: Morgan
 tags: 
     - Golang
     - 语言教程
+catalog: true
 ---
 
 ### Golang简介
