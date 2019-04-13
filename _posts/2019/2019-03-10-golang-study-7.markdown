@@ -190,5 +190,7 @@ func (path Path)TranslateBy(offset Point, add bool) {
 Period.🤔
 
 更多文章欢迎关注公众号：程序员 Morgan。
+![1534254397866](https://ws4.sinaimg.cn/large/006tNc79ly1g212bi9i1sj30k80bywh4.jpg)
 
 聚焦程序人生，关注自我管理，不给自己人生设限！
+
