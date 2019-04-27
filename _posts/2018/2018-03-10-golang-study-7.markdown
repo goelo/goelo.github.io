@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Go语言学习笔记(七)之方法
-date: 2019-04-13 9:56:00
+date: 2018-04-13 9:56:00
 author: Morgan
 tags: 
     - Golang

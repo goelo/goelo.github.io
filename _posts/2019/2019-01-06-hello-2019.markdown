@@ -1,13 +1,12 @@
 ---
-layout: post
 title: 你好，2019
 date: 2019-01-06 2:46:20
-author: Morgan
-tags: 
-    - 个人成长
+tags: self-management
+categories: 成长感悟
+copyright: true
 ---
 
-有段时间没有更新博客了，有些松懈。
+有段时间没有更新公众号内容了，有些松懈。
 
 说来惭愧，人生第一次写年终总结。
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 如何优雅的使用Go接口?
-date: 2019-04-21 9:56:00
+date: 2018-04-21 9:56:00
 author: Morgan
 tags: 
     - Golang

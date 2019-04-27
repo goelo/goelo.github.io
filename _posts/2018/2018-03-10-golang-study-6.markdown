@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Go语言学习笔记(六)之结构体
-date: 2019-03-10 19:18:00
+date: 2018-03-10 19:18:00
 author: Morgan
 tags: 
     - Golang

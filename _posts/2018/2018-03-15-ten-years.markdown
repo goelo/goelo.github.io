@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Teach Yourself Programming in Ten Years
-date: 2019-03-15 20:36:00
+date: 2018-03-15 20:36:00
 author: Morgan
 tags: 
     - 自我学习
