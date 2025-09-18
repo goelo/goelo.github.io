@@ -1,41 +1,45 @@
 ---
 layout: post
-title: 我在优达的学习之路
+title: My Learning Journey with Udacity
 date: 2018-06-26 22:29:43
 author: Morgan
 tags: 
-    - 个人成长
-    - 自我管理
+    - Personal Growth
+    - Self-Management
 ---
 
-在2018年1月24号开始了我在优达的机器学习之旅，我在2018年6月4号的时候提前一月半月完成了课程要求，完成了毕业，总共用时不到5个月的时间，平均每天学习在1-2个小时之间。
+I started Udacity’s Intro to Machine Learning nanodegree on 24 January 2018 and submitted my final project on 4 June—about four and a half months later. I averaged one to two hours of study each day.
 
 <!-- more -->
-### 课程特点
-从总体来说，优达的课程体验还是很棒的。之前学习过其他网站在线课程，有以下几点区别：
 
-1. 优达的每个视频都很简洁，不讲废话，用最短的时间把知识点讲清楚，每次一个知识点，然后很多视频后面跟随着配套的测验和练习，对于刚学到的知识落地。
-2. 付费课程是逐步解锁的，在不提交当前课程要求的项目的时候是无法解锁后续课程的，我感觉这样的好处就是防止贪多，通过技术手段来告诉我们一步一个脚印的学习。配套的交流方式有微信和论坛板块，一对一的专门辅导（没体验过，需要预约）主要以微信群为主，按照课程的层级，每完成一个项目会有专人拉你进入下一个项目的交流群。每个群里都有专门的Mentor来负责答疑解惑，群里的小伙伴也是乐于分享，回答问题。**富兰克林曾说过，加入一个小团体，很有必要...** 通过这种团体的活动，也会促使每个人坚持学习下去。
-3. 优达的课程是以项目为导向的，这些项目是需要完全靠自己动手去实现的，是一个落地的从0变为1的过程，在这个过程中需要自己去查阅英文文档，自己去找解决办法。这有点国外的教学风格，只提出问题，最多给点提示，自己去寻找解答的方案，培养和锻炼了我们动手解决分析问题的能力。
-4. 这个是想重点说的，项目提交的code有专人的代码审阅，可以帮自己找出bug和需要优化改进的地方，审阅的老师都非常细致，也可以在提交项目的时候将问题一起提交。老师也会专门解答。像我在做第三章的项目的时候，反复提交了4次，每次老师都很有耐心的指出项目中不合理的地方，可以使我们针对性的改进。
-5. 课程也会定期的对项目进行课后答疑，通过在线直播的方式，学员可以提出自己的问题，会有专门的老师在线负责讲解，另外在学习的过程中，优达也会时不时的举行一些小活动才促使学员快速学习，参加完成活动要求的还有小礼品。
+### What I liked about the course
 
-![课程毕业以后优达送的毕业礼物](http://upload-images.jianshu.io/upload_images/7793041-851e57605ad730e8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+1. **Focused videos.** Each lesson covers a single concept in just a few minutes, followed immediately by a quiz or exercise to anchor the idea.
+2. **Drip-fed projects.** You can’t unlock the next module without completing the current project, which prevents binge-watching and encourages steady progress. Mentors host WeChat groups for each milestone, and the peer support is surprisingly motivating.
+3. **Project-first learning.** Every project must be implemented from scratch. The instructors pose the problem, maybe drop a hint, and you figure out the rest—reading docs, researching algorithms, debugging. It’s a great rehearsal for real work.
+4. **Detailed reviews.** Each submission receives personalised feedback. Reviewers point out bugs, style issues, and opportunities to improve. One of my projects took four iterations; every round taught me something new.
+5. **Live Q&A and community events.** Regular livestreams let you ask instructors direct questions, and occasional challenges provide extra accountability (plus swag).
 
-### 自我总结
-可能会有人认为没必要花几千块钱来付费学习，其实我认为付费是变相的节省时间。但是首先要求自己有坚持下去的决心和毅力，能够保证一直坚持学习下去。另外付费课程都有对应的学习路线的规划，可以省去自己摸索的过程，缩短了学习周期，针对性的提高是比较快的学习途径。
+![Graduation gift from Udacity](http://upload-images.jianshu.io/upload_images/7793041-851e57605ad730e8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-我在报名机器学习(入门)之前，自己在网上查阅了很多资料，谷歌和百度搜索，包括知乎的人工智能相关的话题，发现机器学习内容要学习的内容太多太多，还没入门已经开始打退堂鼓了。后来决定报名优达的机器学习(入门)，从python基本语法到数据分析，再到后面的各种算法模型，通过课程的规划，一个萝卜一个坑，知识体系贯穿起来再回过头来看，就发现机器学习入门来说还是比较简单的了。当然，并不是说机器学习简单，事实上随着机器学习的深入，发现需要学习的东西会越来越多，这就要求个人的自学能力，有的放矢的针对性查漏补缺了。
-![自己做过的项目都保存在github](http://upload-images.jianshu.io/upload_images/7793041-a8d87fb31e00129c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-在信息爆炸的时代，人人都会有焦虑症状，但最重要的是要坚持并踏实的走下去，提高学习的加速度，而不是学习的速度，这样自己才能脱颖而出。在我报名机器学习入门课程的时候，我先明确了自己是否能够每天拿出1-2小时的时间来学习，是否能够不像上次那样半途而废，答案是肯定的，因为我决心改变自己，做一个终生学习者，去提高自己的实力，可能最后不会转行成功，所谓技多不压身，多学点知识总没有坏处。
+### Why pay for a course?
 
-通过这几个月的学习，我深深的感受到，无论做任何事情，首先我们的内心一定是笃定能够坚持主动的做下去的，哪怕中途遇到困难，也不能停止努力。坚持是一种态度，也是一种能力。
-![晒张毕业图](http://upload-images.jianshu.io/upload_images/7793041-18a8f7f2e093b27e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-最后和大家分享，如果自己不能百分百确信自己可以坚持下去，可以先尝试在优达学城听一下免费的课程，看是否自己能够坚持把免费课程学完，算是对自己的一个小测验。优达的免费课程也非常不错，也有付费课程的体验课也可以尝试听一下，再做下一步的决定，总之行动之前一定要经过自己的深思熟虑。
+Could I have stitched together free resources? Possibly. But paying saved time, provided a clear roadmap, and came with built-in accountability. The key, of course, is making sure you’re ready to commit before swiping your card.
 
-机器学习(入门)课程不会是我最后一个在优达的课程，我还会继续学习，下一步打算报名机器学习进阶课程，深入了解机器学习，通过钻研和学习，能够提升自己的竞争力，将学习到的知识能够真正的解决现实中的问题。
+Before enrolling I had browsed countless articles on Google, Baidu, and Zhihu. The sheer volume of machine-learning topics felt overwhelming. Udacity’s curriculum eased me in—from Python basics to data analysis to core algorithms—connecting the dots in a structured way. Once you reach the advanced material you still need self-directed study, but the foundation is solid.
 
-如果你打算报名优达付费课程，可以使用我的优惠码:4BED019B，使用可以减免300元学费，仅限新用户。你也可以是去网上找别人的优惠码，都是一样的。
+![Projects stored on GitHub](http://upload-images.jianshu.io/upload_images/7793041-a8d87fb31e00129c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-最后愿你我都能做一个终生学习者，保持谦卑的态度，就像乔帮主说的那样："stay hungry, stay foolish".
+If you’re anxious about falling behind, focus on building learning momentum instead of raw speed. When I enrolled I double-checked that I could dedicate one to two hours nightly. This time I stayed the course.
 
+The main takeaway: persistence is both an attitude and a skill.
+
+![Graduation screenshot](http://upload-images.jianshu.io/upload_images/7793041-18a8f7f2e093b27e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+If you’re unsure about committing, sample Udacity’s free courses first. Treat finishing them as a test of your consistency. Once you’re comfortable, consider upgrading—you’ll still find discount codes online if you need them.
+
+This intro program won’t be my last. Next up: the advanced machine learning nanodegree. I want to keep sharpening my skills and applying them to real problems.
+
+If you plan to enrol, you can use my referral code `4BED019B` for a ¥300 discount (new students only), or hunt down other codes.
+
+Stay curious and keep learning. As Steve Jobs said, “Stay hungry, stay foolish.”

@@ -1,62 +1,62 @@
 ---
 layout: post
-title: 笨办法学Golang(二)
+title: Learning Go the Hard Way (Part 2)
 date: 2018-01-14 20:56:20
 author: Morgan
 tags: 
-    - 语言教程
+    - Tutorials
     - Golang
-catalog: true	
+catalog: true
 ---
 
-这是Go语言学习笔记的第二篇文章。
+This is the second entry in my Go learning notes.
 
 <!--more -->
 
-> Go语言学习笔记参考书籍「Go语言编程」、Go官方标准库
+> References: *The Go Programming Language* and the official Go standard library docs.
 
-### 前文提要
+### Recap
 
-上篇文章中留了个练习，查询一下Go语言中fmt包下面`Print`,`Printf`,`Println`三个函数的使用。
+Last time I asked you to explore the differences among `fmt.Print`, `fmt.Printf`, and `fmt.Println`.
 
 ```go
-//Print采用默认格式将其参数格式化并写入标准输出。如果两个相邻的参数不只是字符串，则会在输出之间添加空格
+// Print formats arguments with default verbs and writes to standard output.
 func Print(a ...interface{}) (n int, err error)
-//Printf根据format参数生成格式化字符串并写入标准输出
-func Printf(format string, a...interface{}) (n int, err error)
-//Println采用默认格式化将其参数格式化并写入标准输出，在相邻参数的输出之间添加空格并在输出结束后添加换行符
+// Printf formats according to a format specifier.
+func Printf(format string, a ...interface{}) (n int, err error)
+// Println formats with spaces between operands and a trailing newline.
 func Println(a ...interface{}) (n int, err error)
 ```
 
-上面函数定义看不懂没关系，后面学到接口就懂了。我们先借助例子来看一下这三个函数的区别：
+Try them:
 
 ```go
 a := "hello world"
-b, c:= 123,456
-fmt.Print(a,b,c, "\n")
-fmt.Printf("%v%v%v\n", a,b,c) //一般使用%v来格式化输出
-fmt.Println(a,b,c)
+b, c := 123, 456
+fmt.Print(a, b, c, "\n")
+fmt.Printf("%v%v%v\n", a, b, c)
+fmt.Println(a, b, c)
 ```
 
-输出结果:
+Output:
 
-```go
+```
 hello world123 456
 hello world123456
 hello world 123 456
 ```
 
-可以看出，
+Key takeaways:
 
-- `Print`需要手动添加换行符，并且只有相邻的参数不是字符串的情况下才会自动添加空格。
-- `Printf`的入参是string类型，可以根据参数类型使用%s, %d来格式化输出。一般所有类型都可以使用%v来进行输出。
-- `Println`会自动在相邻参数之间添加空格并自动添加换行符。
+- `Print` requires manual newlines and only inserts spaces when adjacent arguments aren’t strings.
+- `Printf` uses format verbs—`%v` prints most types readably.
+- `Println` adds spaces and a newline automatically.
 
-### 变量
+### Variables
 
-#### 变量声明
+#### Declarations
 
-Go语言中引入了关键字`var`,变量类型放在变量名之后。Go语言语句末尾不需要像C语言一样用`;`作为结束标记。
+Go uses the `var` keyword with the type after the name. No semicolons needed.
 
 ```go
 var v1 int
@@ -64,13 +64,13 @@ var v2 string
 var (
     v3 float64
     v4 *int
-)//还可以将多个需要声明的变量放在一起，一般用于全局变量中
-var v5, v6, v7 int //多变量声明
+)
+var v5, v6, v7 int
 ```
 
-#### 变量初始化
+#### Initialisation
 
-变量声明完需要初始化变量，有三种方式：
+Three common patterns:
 
 ```go
 var v1 int = 10
@@ -78,87 +78,67 @@ var v2 = 11
 v3 := 1.0
 ```
 
-当不写变量类型的时候，Go语言可以从初始化表达式的右值推导出该变量的类型。如果变量初始化的时候未给变量指定初始值，则会程序会给变量一个的默认值，例如int型的默认值为0.
+When you omit the type, Go infers it from the right-hand side. Skip the value entirely and you get the type’s zero value (`0` for integers, `""` for strings, etc.). The short declaration `:=` only works for new variables.
 
-**注意**：第三种初始化方式中，变量(v3)必须是`未被声明过`的，否则会导致编译错误。
+#### Assignment
 
-#### 变量赋值
-
-Go语言中认为变量初始化和变量赋值是两个概念。看例子：
+Initialisation and assignment are distinct. Go supports multiple assignment like Python:
 
 ```go
 var v1 string
 v1 = "hello, world"
-//Go语言中有类似python实现的多变量赋值功能
-var i, j int = 1,2
+var i, j int = 1, 2
 i, j = j, i
 ```
 
-同样的，Go语言函数也可以返回多个值。
+Functions can also return multiple values.
 
-#### 匿名变量
+#### Blank identifier
 
-Go语言中还有一种变量，成为匿名变量。像上面提到的函数返回多个值，就可以使用匿名变量来优化调用。
+Use the blank identifier `_` to ignore values you don’t need:
 
 ```go
-func getResult() (result string, err int){
-    result := "success"
-    err := 0
-    return result, err
+func getResult() (string, error) {
+    return "success", nil
 }
+
 result, _ := getResult()
 ```
 
-当我们只想得到`result`而不关心`err`, 匿名变量的优势就体现出来了，同样的也可以用在`for`循环中。
+### Constants
 
-### 常量
-
-#### 定义常量
-
-1. 通过`const`关键字来定义常量，既可以指定常量类型，也可以不指定常量类型
-2. 常量定义的右值不能是程序运行期才能获得的结果。
-
-用例子说话：
+Define constants with `const`. Values must be known at compile time.
 
 ```go
-const myname string = "Morgan"
+const myName string = "Morgan"
 const zero = 0.0
 const (
-	number int64 = 1024
-    result = "success"
+    number int64 = 1024
+    result        = "success"
 )
 const v1, v2, v3 = 1, 2.0, "good"
 const offset = 3 >> 2
-//以上都是正确的写法
-const myPath = os.GetEnv("PATH")//build error, 因为os.GetEnv()只有运行期才能获得结果。
+// const myPath = os.GetEnv("PATH") // compile error: runtime value
 ```
 
-#### iota用法
+#### `iota`
 
-`iota`是Go语言预定的常量,`iota`在每一个`const`关键字出现时被reset为0，然后在下一个iota出现之前，每出现一次`iota`,自动加1。
+`iota` resets to 0 in each `const` block and increments automatically:
 
 ```go
 const (
-	v0 = iota				//v0 = 0, iota被reset为0
-    v1 = iota				//v1 = 1
-    v2 = iota				//v2 = 2
+    v0 = iota // 0
+    v1        // 1
+    v2        // 2
 )
+
 const (
-	v3 = iota * 10			//v3 = 0, iota被reset为0
-    v4 = iota * 10			//v4 = 10
-    v5 float32 = iota * 10  //v5 = 20.0
+    v3 = iota * 10 // 0
+    v4 = iota * 10 // 10
+    v5 = iota * 10 // 20
 )
 ```
 
-如果多个`const`语句的赋值表达式是一样的，则可以简写如下：
+### Wrap-up
 
-```go
-const (
-	v0 = iota
-	v1
-	v2
-)
-```
-
-今天学习了变量和常量的用法，尽管涉及的代码不多，但是编程语言的学习最忌眼高手低，因此我也按部就班的每一行都敲出来，并将程序运行。为此针对自己的学习中涉及的代码，整理了一个[repo](https://github.com/goelo/LearnGolangTheHardWay), 希望后续学习能使它变得充实起来。
-
+Today’s focus was variables and constants. It may seem basic, but typing every line solidifies your understanding. I’m collecting all examples in a [GitHub repo](https://github.com/goelo/LearnGolangTheHardWay); feel free to follow along.

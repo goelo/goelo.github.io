@@ -1,37 +1,43 @@
 ---
 layout: post
-title: 你，过度焦虑吗？
+title: Are You Caught in Chronic Anxiety?
 date: 2018-07-23 23:08:19
 author: Morgan
 tags: 
-    - 个人成长
-    - 自我管理
+    - Personal Growth
+    - Self-Management
 catalog: true
 ---
 
-今天和一位同事聊天，期间聊到了她的现状：不是很喜欢自己目前的工作，希望能够尽快跳槽到别的行业，因为年龄的增长会让转行更加困难。在空余时间也自学过 python 和机器学习，但都因为中途某些事情耽搁下来。
+I recently spoke with a colleague who dislikes her current role. She’s afraid time is running out to switch careers, so she keeps dabbling in Python and machine learning. Each attempt stops halfway when life interrupts. Sound familiar?
 
 <!-- more -->
-这位同事给我的感觉就和目前大多数人所处的情况一样：过度焦虑。
-过度焦虑会带来不好的后果，主要有两点：
-1. 产生过度收集资料的松鼠病，只知囤货不知消化
-2. 做事浮躁，不容易长期坚持做一件事
 
-那该如何避免过度焦虑呢？我认为可总结为十二个字：目标明确，坚持行动，定期复盘
+Too much anxiety leads to two common traps:
 
-####目标明确
-首先要给自己制定一个目标。然后进行目标拆解，找一张白纸，左边写上目前的现状，右边写想实现的目标。然后进一步细分，要实现这个目标需要具备哪些能力，可以分为初，中，高三个等级，然后来检查自己处于哪个等级阶段，最终变成大目标一个一个具体的小目标。这样做的好处可以让我们既能把控全局，也能掌握细节。
+1. **Squirrel syndrome**—hoarding articles, tutorials, and courses without digesting them.
+2. **Restlessness**—jumping between plans without sticking to one long enough to see progress.
 
-![](https://upload-images.jianshu.io/upload_images/7793041-765571263bb414f0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+How do we escape? Three habits help: **clarify goals, act consistently, review regularly.**
 
-#### 坚持长期行动
-做一件事情容易，长期坚持做一件事很难。我和爱人曾经说过，朋友圈遍地的英语学习打卡，但是看看有几个是坚持一年以上的，一个都没有。做任何事情坚持个三五年来看，能量都是巨大的，但现在人们都习惯关注短期效应，却忽视了长期积累带来的能量。明确自己目标以后，要充分利用好 8 小时之外的空余时间，根据自己欠缺的内容有的放矢的去学习就行了。
-![从 4 月份到 7 月份我空余学习时间的统计汇总](https://upload-images.jianshu.io/upload_images/7793041-fe942bf2a1170301.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+### Clarify the goal
 
+Grab a sheet of paper. On the left, describe where you are today; on the right, describe where you want to go. Break the gap into skills to acquire—basic, intermediate, advanced—and identify your current level. A large vision becomes a series of concrete milestones. You stay aware of the big picture while working on manageable tasks.
 
-####定期复盘
-在坚持行动的过程中，总结很重要。除了自己学到的知识，需要形成输出，完成学习的闭环之外。还需要定期总结自己前段时间的收获和不足，记录自己的心流体会，为下阶段的时间优化分配提供参考。
+### Commit to long-term action
 
-![](https://upload-images.jianshu.io/upload_images/7793041-7418f262beb3a747.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+Starting is easy; sustaining the effort is hard. Social media is full of 21-day challenges, but few people keep them up for a year. Lasting change comes from years of repetition. Once you know the target, invest your evenings and commutes in the missing skills. Focus beats FOMO.
 
-恰逢我关注的一个大佬stormzhang前段时间针对这个问题进行了解答，这里引用一下他的话作为结尾："当下的生活，焦虑真的是常态，有焦虑不是坏事，一点焦虑也没有说明你压根没啥追求，但也没必要过分焦虑，面对焦虑最好的办法就是『做好现在的事』"。
+```
+April–July: my personal study log (hours outside of work)
+```
+
+### Review and adjust
+
+Learning needs a feedback loop. Besides sharing what you’ve learned, schedule retrospectives—weekly or monthly—to note wins, shortcomings, and emotional state. These notes guide how you allocate time going forward.
+
+![Reflection notes](https://upload-images.jianshu.io/upload_images/7793041-7418f262beb3a747.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+
+Product builder Storm Zhang summed it up well: “Anxiety is normal. Having none means you lack ambition. But there’s no need to be overwhelmed—do the work in front of you.”
+
+Let’s channel that energy into steady progress rather than endless worry.

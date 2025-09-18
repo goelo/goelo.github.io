@@ -1,42 +1,31 @@
 ---
 layout: post
-title: 100天挑战
+title: The 100-Day Challenge
 date: 2018-08-21 19:23:51
 author: Morgan
 tags: 
-    - 自我管理
+    - Self-Management
 ---
 
-> 种一棵树最好的时 间是十年前，其次是现在。
+> “The best time to plant a tree was ten years ago. The second-best time is now.”
 
-我每天早上开始工作前都有看github trending的习惯。有一天我发现了一个100天机器学习的repo(代码仓库)，感觉非常棒，特别适合拿来作为入门机器学习的资料并培养坚持学习的习惯。本人不才，也参与了原英文 repo 的翻译工作，目前中文 repo已经同步到英文最新版。如下图：
-![具体中文链接可以公众号回复「100ML」获取。](https://upload-images.jianshu.io/upload_images/7793041-7d0de3068fb417d9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+I scan GitHub Trending every morning and stumbled across a “100 Days of Machine Learning” repository. It looked perfect for beginners—and for building consistency. I helped translate the material into Chinese so more people could participate.
 
 <!--more -->
 
-目前英文原本的 repo 已经获得了 9124 个⭐️，中文版的由于比较小众，目前仅收获 191 个⭐️。
-好的资料值得分享，因此我萌生了建了一个微信群的想法，召集一些朋友来开始学习打卡。为了保证每人的打卡记录可以信息沉淀，最终打卡方式选择在石墨文档，需要大家加入石墨作为协作者来打卡，选择石墨的好处是每人对应自己的打卡文件，并易于编辑，而且等 100 天结束可以生成 pdf 文件，作为见证自己的成长过程。石墨文章内容具体是长这样的：
-![](https://upload-images.jianshu.io/upload_images/7793041-aed03b1a9b4b0829.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/615)
+The English repo has already earned thousands of stars; the Chinese fork is still small but growing. To keep learners accountable I created a WeChat group and asked everyone to log progress in a shared Shimo document. Each person has a dedicated page that can be exported as a PDF at the end of the challenge.
 
-里面打卡记录是长这样的
+### How we run it
 
-![](https://upload-images.jianshu.io/upload_images/7793041-20640b1f133f8353.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+- **Milestone groups.** We celebrate at 15, 30, 60, and 100 days. Reaching a milestone moves you into a new chat. The goal is to maintain momentum and avoid the “three-day monk” syndrome.
+- **Weekday check-ins.** We only count workdays so weekends can be used for reflection. If a lesson takes longer than expected, slow down—mastery matters more than speed. Participants pursuing other topics are welcome; the spirit is daily practice, not just machine learning.
+- **Shared knowledge base.** Questions and answers go into a FAQ folder so newcomers benefit from past discussions.
+- **Action over talk.** Ultimately, lasting change comes from doing the work.
 
-刚开始我初衷是想作为机器学习的 100 天挑战群，后来进群的有些朋友喜欢这种互相鼓励监督的学习氛围，希望能够加入这个圈子，但并不是学习机器学习相关的知识，只是希望按照自己的目标去学习打卡，也非常欢迎他们的加入。
+### Results so far
 
-为了能够促使大家坚持下去，自己想了几点办法：
-- 100天挑战采用爬楼的方式鼓励大家坚持下来，当达到15天，30天，60天，100天的时候，进入对应的群，我希望这能作为一种促使方式，避免大家三分钟热度，我希望最终能够在100天结束的时候还能看到大家，100天能够坚持下来得小伙伴基本在任何事情上都是可以坚持下去的。
-2. 打卡只统计工作日为有效打卡时间，周末留给大家对这一周末复盘。知识一定要做好复盘才能成为自己的。我们严格每个工作日打卡，在遇到比较难的代码的时候，大家可以视情况放缓脚步，不必须严格按照repo的日期每天完成。有些朋友不打算搞机器学习，也可以加入这个小圈子，目的是培养一种坚持学习的习惯，自己设定好目标，然后按部就班的去学习去打卡就OK。
-3. 鼓励大家提出问题讨论，我也尽量的将问题整理在问题汇总的文件夹中，这样可以保证信息的沉淀，帮助后来人少踩坑。
-4. 无论别人说的再多，最终还是需要自己能够行动起来，坚持下去。
+We’re at day 13 (weekday count). Many members have already carved out daily study time and can see progress.
 
-### 总结
-目前来看，这个小圈子只要能够帮助大家培养一种良好的学习习惯，它就是有价值的。100天挑战已经进行了第13天了(只统计有效工作日打卡，周末给大家时间来复盘上周的学习)，效果很不错，很多人能够坚持学习了，学习的效果慢慢也体现出来了。
-![](https://upload-images.jianshu.io/upload_images/7793041-29129623fe026c96.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+Change is never easy. You need a clear goal and relentless effort. Industries may feel crowded, but perseverance quickly thins the ranks. The people who rise are the ones who keep showing up.
 
-改变从来都不是容易实现的，需要有坚定的目标和持之以恒的行动。别看任何一个行业密密麻麻的都是人，但是只要开始努力往上一点，就会刷掉一大批人，那些成功的，最终都是坚持下来的人。
-
-最后，愿你从今天开始，逃离舒适区，成就自己，也欢迎加入 100 天挑战群，改变自我。
-想加入群的朋友，公众号后台点击「撩我」获取我的二维码，加我微信，我拉你入群。
-![扫码关注机器学习Club](https://upload-images.jianshu.io/upload_images/7793041-aa777d0e41627cb0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
-
+If you’d like to join, reach out via the WeChat QR code in the public account and I’ll add you to the group. Let’s escape our comfort zones together.
