@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="About - Astro Project" description="Learn more about our modern web development stack">
+  <div class="flex flex-col min-h-screen">
+    <Header />
+
+    <main class="flex-1">
+      <section class="py-16 bg-dark-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-dark-text-primary mb-6">
+              About This Project
+            </h1>
+            <p class="text-xl text-dark-text-secondary">
+              Built with modern web technologies for optimal performance and developer experience
+            </p>
+          </div>
+
+          <div class="prose prose-lg prose-invert max-w-none">
+            <div class="bg-dark-surface border border-dark-border rounded-2xl p-8 mb-8">
+              <h2 class="text-2xl font-semibold text-dark-text-primary mb-4">
+                <i class="fas fa-rocket mr-3 text-accent-400"></i>
+                Technology Stack
+              </h2>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div>
+                  <h3 class="text-lg font-semibold text-dark-text-primary mb-3">Frontend</h3>
+                  <ul class="space-y-2 text-dark-text-secondary">
+                    <li><i class="fas fa-check text-green-400 mr-2"></i>Astro - Static Site Generator</li>
+                    <li><i class="fas fa-check text-green-400 mr-2"></i>TypeScript - Type Safety</li>
+                    <li><i class="fas fa-check text-green-400 mr-2"></i>Tailwind CSS - Utility-First Styling</li>
+                    <li><i class="fas fa-check text-green-400 mr-2"></i>Alpine.js - Lightweight Reactivity</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-semibold text-dark-text-primary mb-3">Features</h3>
+                  <ul class="space-y-2 text-dark-text-secondary">
+                    <li><i class="fas fa-check text-green-400 mr-2"></i>Component Islands Architecture</li>
+                    <li><i class="fas fa-check text-green-400 mr-2"></i>Zero JavaScript by Default</li>
+                    <li><i class="fas fa-check text-green-400 mr-2"></i>Dark Theme with Custom Colors</li>
+                    <li><i class="fas fa-check text-green-400 mr-2"></i>Mobile-First Responsive Design</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-dark-surface border border-dark-border rounded-2xl p-8 mb-8">
+              <h2 class="text-2xl font-semibold text-dark-text-primary mb-4">
+                <i class="fas fa-lightbulb mr-3 text-accent-400"></i>
+                Why This Stack?
+              </h2>
+
+              <div class="space-y-4 text-dark-text-secondary">
+                <p>
+                  <strong class="text-dark-text-primary">Astro</strong> delivers exceptional performance through its
+                  component islands architecture, shipping minimal JavaScript while maintaining full interactivity
+                  where needed.
+                </p>
+
+                <p>
+                  <strong class="text-dark-text-primary">TypeScript</strong> provides comprehensive type safety,
+                  better tooling, and improved developer experience with intelligent autocomplete and error detection.
+                </p>
+
+                <p>
+                  <strong class="text-dark-text-primary">Tailwind CSS</strong> enables rapid UI development with
+                  utility classes while maintaining design consistency and allowing for easy customization.
+                </p>
+
+                <p>
+                  <strong class="text-dark-text-primary">Alpine.js</strong> adds reactive behavior with minimal
+                  overhead, perfect for progressive enhancement without the complexity of larger frameworks.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-dark-surface border border-dark-border rounded-2xl p-8">
+              <h2 class="text-2xl font-semibold text-dark-text-primary mb-4">
+                <i class="fas fa-code mr-3 text-accent-400"></i>
+                Getting Started
+              </h2>
+
+              <div class="bg-dark-bg rounded-lg p-4 mb-4">
+                <code class="text-accent-400 text-sm">
+                  # Clone the repository<br>
+                  git clone &lt;repository-url&gt;<br><br>
+                  # Install dependencies<br>
+                  npm install<br><br>
+                  # Start development server<br>
+                  npm run dev
+                </code>
+              </div>
+
+              <p class="text-dark-text-secondary">
+                The project includes hot reloading, TypeScript checking, and Tailwind CSS compilation
+                out of the box. Start building your application immediately!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>

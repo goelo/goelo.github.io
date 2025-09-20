@@ -1,0 +1,81 @@
+---
+// FAQ Component - Exact replica from image.html lines 355-397
+// Features: Alpine.js accordion functionality, Material Icons, Tailwind styling
+
+interface FAQItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+const faqData: FAQItem[] = [
+  {
+    id: 1,
+    question: "你们的评测是收费的吗？",
+    answer: "我们所有的评测文章和内容都是免费向所有用户开放的。我们的运营资金来源于网站广告和部分工具的联盟营销链接，但这绝不会影响我们评测的中立性和客观性。"
+  },
+  {
+    id: 2,
+    question: "我如何推荐一个产品给你们评测？",
+    answer: "非常欢迎！您可以通过页脚的联系方式或社交媒体账号给我们发送消息，提供您希望我们评测的AI产品名称和相关信息。我们会将其纳入我们的评测候选列表。"
+  },
+  {
+    id: 3,
+    question: "你们如何保证评测的公正性？",
+    answer: "公正性是我们的核心原则。我们的评测团队独立运作，不受厂商干扰。我们会从多个维度进行测试，包括性能、易用性、价格和用户支持，并结合真实的用例来展示产品的优缺点。"
+  },
+  {
+    id: 4,
+    question: "时间轴上的\"星级\"是如何评定的？",
+    answer: "星级代表了该产品或技术更新在发布时对其所在领域的\"颠覆性\"和\"影响力\"。这是一个相对的评估，主要考量其技术创新程度、对行业格局的改变以及对用户的价值。五星表示具有里程碑式的意义。"
+  }
+];
+---
+
+<section class="py-20 bg-[#0d1117]">
+  <div class="container mx-auto px-4 max-w-4xl" x-data="{ open: 1 }">
+    <h2 class="text-3xl font-bold text-center text-white mb-12">常见问题 (FAQ)</h2>
+
+    <div class="space-y-4">
+      {faqData.map((faq) => (
+        <div class="bg-slate-800 rounded-lg border border-slate-700">
+          <button
+            x-on:click={`open = (open === ${faq.id} ? 0 : ${faq.id})`}
+            class="w-full text-left p-6 flex justify-between items-center focus:outline-none"
+          >
+            <h3 class="text-lg font-semibold text-white">{faq.question}</h3>
+            <span
+              x-bind:class={`{'rotate-45': open === ${faq.id}}`}
+              class="material-icons text-white transform transition-transform"
+            >
+              add
+            </span>
+          </button>
+
+          <div
+            class="px-6 pb-6 text-gray-400"
+            style="display: none;"
+            x-show={`open === ${faq.id}`}
+          >
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Ensure Alpine.js is loaded for accordion functionality
+  import Alpine from 'alpinejs';
+
+  if (!window.Alpine) {
+    window.Alpine = Alpine;
+    Alpine.start();
+  }
+</script>
+
+<style>
+  /* Import Material Icons if not already included globally */
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+</style>

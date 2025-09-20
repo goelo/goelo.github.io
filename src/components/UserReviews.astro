@@ -1,0 +1,184 @@
+---
+// UserReviews.astro - User testimonials and feedback section component
+
+export interface Review {
+  id: number;
+  name: string;
+  avatar: string;
+  rating: number;
+  content: string;
+}
+
+const reviews: Review[] = [
+  {
+    id: 1,
+    name: "科技爱好者",
+    avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuAA8-kC21DcF8sj0wmn79jhrSPG56b-ynJzBanqNJmLQeFRoJI7cBNUZzKHQWFWxghk7OvnDyMpZQVYXOo4DtBeGMvXlXNtRc7QkTHx1tlfmLyXJwSWcCmwbxrPLjwt7vL3Ok7nTDDeIYbhztVwNLdjyBi8S_j8yKNzSdQSTqz0m2gceJ-Cz9_2kyqdrSqazSAUUCWwmtasLflDUyrZtjp2bIXxNzhPc5Hwje4NKdyJ0oqwO23dwzYO5md2R0X1GgQIsY-ndFzDysqc",
+    rating: 5,
+    content: "这里的评测非常客观，帮助我快速了解了各个AI工具的优缺点，节省了大量研究时间！"
+  },
+  {
+    id: 2,
+    name: "设计师",
+    avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuBvUMKRv_vWEg3jGHk9rMhIhfIOd59F-_r1CzgJly_xECGdGdatP1FBJTazDNcdgeMH3vDSeB4p7Mbu6aEuPwjn0oLYPn6YkMab0LYhT4tJp5wNhTn4L9KWGSk9_oR_H-KEdTNMJzNBSGm54w3ooilWZiUmR3xVamW7YeVCFYdyartK2nRUnIC3plok-yaCUQ_FR_b8g9bHBlfAdQRr-fQ8ufQ9KwAfxd1YQGAai7aLn4mOZn3_br_S7Qw41nhUTA9ridWxDuhXnAnx",
+    rating: 4,
+    content: "AI绘画工具的对比评测太棒了！希望未来能有更多关于设计和创意工作流的评测内容。"
+  }
+];
+
+// Generate star icons based on rating
+function generateStars(rating: number): string {
+  let stars = '';
+  for (let i = 1; i <= 5; i++) {
+    if (i <= rating) {
+      stars += '<i class="fas fa-star"></i>';
+    } else {
+      stars += '<i class="far fa-star"></i>';
+    }
+  }
+  return stars;
+}
+---
+
+<section class="py-20 bg-[#0d1117]">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <h2 class="text-3xl font-bold text-center text-white mb-12">用户之声</h2>
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <!-- Left Column: User Testimonials -->
+      <div class="space-y-8">
+        {reviews.map((review) => (
+          <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+            <div class="flex items-start">
+              <img
+                alt="用户头像"
+                class="w-12 h-12 rounded-full mr-4"
+                src={review.avatar}
+              />
+              <div>
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold text-white">{review.name}</h4>
+                  <div class="text-yellow-400 flex items-center" set:html={generateStars(review.rating)}>
+                  </div>
+                </div>
+                <p class="text-gray-400 mt-2">"{review.content}"</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Right Column: Feedback Form -->
+      <div class="bg-slate-800 p-8 rounded-lg">
+        <h3 class="text-2xl font-bold text-white mb-6">分享你的看法</h3>
+        <form
+          x-data="{
+            name: '',
+            feedback: '',
+            rating: 0,
+            hoveredStar: 0,
+            submitForm() {
+              if (this.name && this.feedback && this.rating > 0) {
+                console.log('Feedback submitted:', {
+                  name: this.name,
+                  feedback: this.feedback,
+                  rating: this.rating
+                });
+                // Reset form
+                this.name = '';
+                this.feedback = '';
+                this.rating = 0;
+                alert('感谢您的反馈！');
+              } else {
+                alert('请填写所有字段并选择评分');
+              }
+            },
+            setRating(star) {
+              this.rating = star;
+            },
+            setHover(star) {
+              this.hoveredStar = star;
+            },
+            clearHover() {
+              this.hoveredStar = 0;
+            }
+          }"
+          @submit.prevent="submitForm()"
+        >
+          <!-- Name Input -->
+          <div class="mb-4">
+            <label class="block text-gray-400 mb-2" for="name">昵称</label>
+            <input
+              class="w-full bg-slate-900 border border-slate-700 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              id="name"
+              type="text"
+              x-model="name"
+              placeholder="请输入您的昵称"
+            />
+          </div>
+
+          <!-- Feedback Textarea -->
+          <div class="mb-4">
+            <label class="block text-gray-400 mb-2" for="feedback">你的反馈</label>
+            <textarea
+              class="w-full bg-slate-900 border border-slate-700 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              id="feedback"
+              rows="4"
+              x-model="feedback"
+              placeholder="请分享您的使用体验和建议"
+            ></textarea>
+          </div>
+
+          <!-- Interactive Star Rating -->
+          <div class="mb-6">
+            <label class="block text-gray-400 mb-2">评分</label>
+            <div class="flex items-center space-x-1 text-yellow-400 text-2xl">
+              <template x-for="star in 5" :key="star">
+                <i
+                  :class="[
+                    'cursor-pointer hover:text-yellow-300 transition-colors duration-200',
+                    (hoveredStar >= star || (hoveredStar === 0 && rating >= star)) ? 'fas fa-star' : 'far fa-star'
+                  ]"
+                  @click="setRating(star)"
+                  @mouseenter="setHover(star)"
+                  @mouseleave="clearHover()"
+                ></i>
+              </template>
+            </div>
+            <p class="text-sm text-gray-500 mt-1" x-show="rating > 0">
+              您给出了 <span x-text="rating"></span> 星评分
+            </p>
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full disabled:opacity-50 disabled:cursor-not-allowed"
+            type="submit"
+            :disabled="!name || !feedback || rating === 0"
+          >
+            提交反馈
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Additional styles for better star rating interaction */
+  .star-rating i {
+    transition: all 0.2s ease;
+  }
+
+  .star-rating i:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+<script>
+  // Ensure Alpine.js is available for this component
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof Alpine === 'undefined') {
+      console.warn('Alpine.js is required for UserReviews component interactive features');
+    }
+  });
+</script>

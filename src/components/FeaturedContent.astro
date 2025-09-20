@@ -1,0 +1,135 @@
+---
+// FeaturedContent.astro - Featured content section with 3-card grid layout
+// Extracted from image.html lines 68-131
+
+interface FeaturedArticle {
+  id: number;
+  title: string;
+  readingTime: string;
+  description: string;
+  imageUrl: string;
+  imageAlt: string;
+  linkText: string;
+  linkUrl: string;
+}
+
+const featuredArticles: FeaturedArticle[] = [
+  {
+    id: 1,
+    title: "最新重磅评测: GPT-4o 全方位解析",
+    readingTime: "8分钟",
+    description: "深入探讨 OpenAI 最新模型的性能、应用场景及未来潜力。",
+    imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuCxqF0IvMRFZnfl2TztcMV0QnEITPMmm_VKTjZWaJpi-AlD1VttcDgSYaU5M_HivnJzOU4goBaEOpBzKCVtk-keujzyie33Ug7yliCiTAIBwO3xg0ZIh7qyE6aEtTR-l_P-czUnXf6IH13QBykFWn7AIZA26RJ7e5qmiPpHTrBs6gC_QzmfmOZ2NFkaFdnm7tYSIBvHhHVFEGLdIuc13lXDzajq8B9LmoHUMJoAKXugnCGs1kf5kiDuRKWqfyzYLIVw0XvBJ90Ft_sn",
+    imageAlt: "最新重磅评测",
+    linkText: "阅读全文",
+    linkUrl: "#"
+  },
+  {
+    id: 2,
+    title: "2025年度5款最佳AI绘画工具",
+    readingTime: "5分钟",
+    description: "从 Midjourney 到 Stable Diffusion，哪款工具最适合你的创作？",
+    imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYMegNycvhlbzfeST0-mVK0N5TIRA3LiFx5ZrD4uJJgBcWIHPRisrLJnqZ-K1UdcHpc47XS5kttEpx5Pl2350HKhHsz3bRUz2XFofPqPWYq6XNY30IE7pNb8PQgdB7KsaQFGqAYTnBH4S9JR5lEMG2bxuNr-twAfM30YYUXRVuHERInIPPNBjygnlG3xHwq6s62tBa-kEivqTlzRU6T3P3zJLWuMDeQgtzT-sTjIAMw7Ck_z6v5jjIliijY1xR5xdunNy2NN6_wRVo",
+    imageAlt: "最佳榜单文章",
+    linkText: "查看榜单",
+    linkUrl: "#"
+  },
+  {
+    id: 3,
+    title: "ChatGPT vs. Claude：两大语言模型终极对决",
+    readingTime: "10分钟",
+    description: "全方位对比分析，告诉你它们各自的优势和最佳应用场景。",
+    imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBccus3Wfg77C5SF7CkGFycVgQz6MHyRX4Q1YiLRZczZwCVI6YuV1yiVKnOAHiaz76I-D5bJETpj3Z6uBV8EYLUIYsR8dg1D056x4DNP6xy703inTGA6-JW_qC0qyvDHFqgia97iFnKTGytapiJ_-XjH_el4LLjH3PT4vPIrK_FuhjIqymSP9f9FYd7tH3BtnXVnIFW-Gaz9GHJEy2SEoI_Sca326u_zMXHuuyK9XrSjveXuCm7nmqDRS2DpsQLo8nZWiLi0rJxdhc2",
+    imageAlt: "深度对比文章",
+    linkText: "阅读对比",
+    linkUrl: "#"
+  }
+];
+
+interface SocialIcon {
+  platform: string;
+  iconClass: string;
+  url: string;
+}
+
+const socialIcons: SocialIcon[] = [
+  { platform: "WeChat", iconClass: "fab fa-weixin text-lg", url: "#" },
+  { platform: "Weibo", iconClass: "fab fa-weibo text-lg", url: "#" },
+  { platform: "Twitter", iconClass: "fab fa-twitter text-lg", url: "#" }
+];
+---
+
+<section class="py-20 bg-gray-900" id="featured-content">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-white mb-12">精选推荐</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      {featuredArticles.map((article) => (
+        <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between hover:transform hover:scale-105 transition-all duration-300">
+          <div>
+            <img
+              alt={article.imageAlt}
+              class="w-full h-48 object-cover"
+              src={article.imageUrl}
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2 text-white">{article.title}</h3>
+              <p class="text-gray-500 text-sm mb-3">阅读时间：{article.readingTime}</p>
+              <p class="text-gray-400 text-base">{article.description}</p>
+              <a
+                class="inline-block mt-4 text-blue-400 hover:text-blue-300 transition-colors"
+                href={article.linkUrl}
+              >
+                {article.linkText} →
+              </a>
+            </div>
+          </div>
+          <div class="px-6 pt-2 pb-4">
+            <div class="flex items-center space-x-3 text-gray-400">
+              <span class="text-sm">分享:</span>
+              {socialIcons.map((social) => (
+                <a
+                  class="hover:text-white transition-colors"
+                  href={social.url}
+                  aria-label={`分享到 ${social.platform}`}
+                >
+                  <i class={social.iconClass}></i>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Enhanced hover effects */
+  .bg-slate-800:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Smooth transitions for social icons */
+  .text-gray-400 a {
+    transition: color 0.2s ease-in-out;
+  }
+
+  /* Image hover effect */
+  .bg-slate-800:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Card content area */
+  .bg-slate-800 img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Link hover animation */
+  .text-blue-400:hover {
+    text-decoration: underline;
+    transform: translateX(2px);
+    transition: all 0.2s ease-in-out;
+  }
+</style>

@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Contact - Astro Project" description="Get in touch with us">
+  <div class="flex flex-col min-h-screen">
+    <Header />
+
+    <main class="flex-1">
+      <section class="py-16 bg-dark-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-dark-text-primary mb-6">
+              Contact Us
+            </h1>
+            <p class="text-xl text-dark-text-secondary">
+              Have questions about the project? We'd love to hear from you!
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="bg-dark-surface border border-dark-border rounded-2xl p-8">
+              <h2 class="text-2xl font-semibold text-dark-text-primary mb-6">
+                <i class="fas fa-paper-plane mr-3 text-accent-400"></i>
+                Send a Message
+              </h2>
+
+              <form
+                x-data="{
+                  submitted: false,
+                  submitForm() {
+                    this.submitted = true;
+                    setTimeout(() => this.submitted = false, 3000);
+                  }
+                }"
+                @submit.prevent="submitForm()"
+                class="space-y-6"
+              >
+                <div>
+                  <label for="name" class="block text-sm font-medium text-dark-text-primary mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-lg text-dark-text-primary placeholder-dark-text-muted focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors"
+                    placeholder="Your full name"
+                  >
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-medium text-dark-text-primary mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-lg text-dark-text-primary placeholder-dark-text-muted focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors"
+                    placeholder="your.email@example.com"
+                  >
+                </div>
+
+                <div>
+                  <label for="subject" class="block text-sm font-medium text-dark-text-primary mb-2">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    required
+                    class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-lg text-dark-text-primary placeholder-dark-text-muted focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors"
+                    placeholder="What's this about?"
+                  >
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-medium text-dark-text-primary mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    class="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-lg text-dark-text-primary placeholder-dark-text-muted focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors resize-vertical"
+                    placeholder="Tell us more about your inquiry..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-accent-600 hover:bg-accent-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 focus:ring-offset-dark-surface"
+                  :class="{ 'bg-green-600 hover:bg-green-700': submitted }"
+                >
+                  <span x-show="!submitted">
+                    <i class="fas fa-paper-plane mr-2"></i>
+                    Send Message
+                  </span>
+                  <span x-show="submitted" x-cloak>
+                    <i class="fas fa-check mr-2"></i>
+                    Message Sent!
+                  </span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-8">
+              <div class="bg-dark-surface border border-dark-border rounded-2xl p-8">
+                <h2 class="text-2xl font-semibold text-dark-text-primary mb-6">
+                  <i class="fas fa-info-circle mr-3 text-accent-400"></i>
+                  Project Information
+                </h2>
+
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <i class="fab fa-github text-accent-400 mt-1 mr-3"></i>
+                    <div>
+                      <h3 class="font-semibold text-dark-text-primary">Repository</h3>
+                      <p class="text-dark-text-secondary">
+                        <a href="#" class="hover:text-accent-400 transition-colors">
+                          github.com/username/astro-project
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start">
+                    <i class="fas fa-book text-accent-400 mt-1 mr-3"></i>
+                    <div>
+                      <h3 class="font-semibold text-dark-text-primary">Documentation</h3>
+                      <p class="text-dark-text-secondary">
+                        Comprehensive guides and examples included
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start">
+                    <i class="fas fa-heart text-accent-400 mt-1 mr-3"></i>
+                    <div>
+                      <h3 class="font-semibold text-dark-text-primary">Open Source</h3>
+                      <p class="text-dark-text-secondary">
+                        Licensed under MIT - free to use and modify
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-dark-surface border border-dark-border rounded-2xl p-8">
+                <h2 class="text-2xl font-semibold text-dark-text-primary mb-6">
+                  <i class="fas fa-question-circle mr-3 text-accent-400"></i>
+                  Quick Links
+                </h2>
+
+                <div class="space-y-3">
+                  <a href="https://astro.build/docs" target="_blank" class="block text-dark-text-secondary hover:text-accent-400 transition-colors">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    Astro Documentation
+                  </a>
+                  <a href="https://tailwindcss.com/docs" target="_blank" class="block text-dark-text-secondary hover:text-accent-400 transition-colors">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    Tailwind CSS Docs
+                  </a>
+                  <a href="https://alpinejs.dev/start-here" target="_blank" class="block text-dark-text-secondary hover:text-accent-400 transition-colors">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    Alpine.js Guide
+                  </a>
+                  <a href="https://www.typescriptlang.org/docs" target="_blank" class="block text-dark-text-secondary hover:text-accent-400 transition-colors">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    TypeScript Handbook
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>
+
+<style>
+  [x-cloak] {
+    display: none !important;
+  }
+</style>

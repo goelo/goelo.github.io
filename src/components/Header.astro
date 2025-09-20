@@ -1,0 +1,89 @@
+---
+// Header component - AI 产品指南针
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<header class={`bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50 ${className}`}>
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo/Brand -->
+      <a class="text-2xl font-bold text-white" href="#">AI 产品指南针</a>
+
+      <!-- Navigation -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a class="text-gray-300 hover:text-white transition-colors" href="#featured-content">最新评测</a>
+        <a class="text-gray-300 hover:text-white transition-colors" href="#timeline">AI 进化史</a>
+        <a class="text-gray-300 hover:text-white transition-colors" href="#featured-comparisons">深度对决</a>
+      </div>
+
+      <!-- Search Input -->
+      <div class="relative hidden md:block">
+        <input
+          class="bg-slate-800 border border-slate-700 rounded-full py-2 pl-10 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-64 transition-all duration-300 focus:w-72"
+          placeholder="搜索评测..."
+          type="search"
+        />
+        <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        class="md:hidden text-white"
+        x-data="{ open: false }"
+        @click="open = !open"
+        aria-label="Toggle menu"
+      >
+        <span class="material-icons">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div
+      class="md:hidden"
+      x-data="{ open: false }"
+      x-show="open"
+      x-cloak
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0 transform -translate-y-2"
+      x-transition:enter-end="opacity-100 transform translate-y-0"
+      x-transition:leave="transition ease-in duration-150"
+      x-transition:leave-start="opacity-100 transform translate-y-0"
+      x-transition:leave-end="opacity-0 transform -translate-y-2"
+    >
+      <div class="px-2 pt-2 pb-3 space-y-1 bg-slate-900/95 border-t border-slate-700">
+        <a href="#featured-content" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors">最新评测</a>
+        <a href="#timeline" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors">AI 进化史</a>
+        <a href="#featured-comparisons" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors">深度对决</a>
+        <!-- Mobile Search -->
+        <div class="relative px-3 py-2">
+          <input
+            class="bg-slate-800 border border-slate-700 rounded-full py-2 pl-10 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+            placeholder="搜索评测..."
+            type="search"
+          />
+          <span class="material-icons absolute left-6 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  [x-cloak] {
+    display: none !important;
+  }
+</style>
+
+<script>
+  // Initialize Alpine.js for mobile menu toggle
+  import Alpine from 'alpinejs';
+
+  if (!window.Alpine) {
+    window.Alpine = Alpine;
+    Alpine.start();
+  }
+</script>

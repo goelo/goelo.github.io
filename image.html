@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI 产品指南针</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<style>
+                body {
+                        font-family: 'Noto Sans SC', sans-serif;
+                        background-color: #0d1117;
+                        color: #c9d1d9;
+                }
+                .hero-bg {
+                        background-image: url('https://images.unsplash.com/photo-1620712943543-2858200f7426?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                        background-size: cover;
+                        background-position: center;
+                }
+                .timeline-card {
+                        animation: fadeIn 0.5s ease-in-out;
+                }
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                .snap-x {
+                    scroll-snap-type: x mandatory;
+                    -webkit-overflow-scrolling: touch;
+                }
+                .snap-center {
+                    scroll-snap-align: center;
+                }
+        </style>
+</head>
+<body>
+<header class="bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50">
+<div class="container mx-auto px-4">
+<div class="flex justify-between items-center py-4">
+<a class="text-2xl font-bold text-white" href="#">AI 产品指南针</a>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-gray-300 hover:text-white transition-colors" href="#featured-content">最新评测</a>
+<a class="text-gray-300 hover:text-white transition-colors" href="#timeline">AI 进化史</a>
+<a class="text-gray-300 hover:text-white transition-colors" href="#featured-comparisons">深度对决</a>
+</div>
+<div class="relative hidden md:block">
+<input class="bg-slate-800 border border-slate-700 rounded-full py-2 pl-10 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-64 transition-all duration-300 focus:w-72" placeholder="搜索评测..." type="search"/>
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+</div>
+<button class="md:hidden text-white">
+<span class="material-icons">menu</span>
+</button>
+</div>
+</div>
+</header>
+<section class="hero-bg relative text-white py-32 md:py-48 text-center">
+<div class="absolute inset-0 bg-black opacity-60"></div>
+<div class="container mx-auto px-4 relative z-10">
+<h1 class="text-4xl md:text-6xl font-bold mb-4">AI 产品指南针</h1>
+<p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">提供深度、公正的 AI 产品评测，并通过动态时间轴，为你记录 AI 技术的每一次进化。</p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+<a class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-lg transition duration-300 text-lg shadow-lg transform hover:scale-105" href="#featured-content">浏览最新评测</a>
+<a class="bg-transparent border-2 border-slate-300 hover:bg-slate-700 text-slate-100 font-bold py-4 px-10 rounded-lg transition duration-300 text-lg transform hover:scale-105" href="#timeline">探索 AI 进化史 →</a>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-900" id="featured-content">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-white mb-12">精选推荐</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
+<div>
+<img alt="最新重磅评测" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxqF0IvMRFZnfl2TztcMV0QnEITPMmm_VKTjZWaJpi-AlD1VttcDgSYaU5M_HivnJzOU4goBaEOpBzKCVtk-keujzyie33Ug7yliCiTAIBwO3xg0ZIh7qyE6aEtTR-l_P-czUnXf6IH13QBykFWn7AIZA26RJ7e5qmiPpHTrBs6gC_QzmfmOZ2NFkaFdnm7tYSIBvHhHVFEGLdIuc13lXDzajq8B9LmoHUMJoAKXugnCGs1kf5kiDuRKWqfyzYLIVw0XvBJ90Ft_sn"/>
+<div class="p-6">
+<h3 class="font-bold text-xl mb-2 text-white">最新重磅评测: GPT-4o 全方位解析</h3>
+<p class="text-gray-500 text-sm mb-3">阅读时间：8分钟</p>
+<p class="text-gray-400 text-base">深入探讨 OpenAI 最新模型的性能、应用场景及未来潜力。</p>
+<a class="inline-block mt-4 text-blue-400 hover:text-blue-300" href="#">阅读全文 →</a>
+</div>
+</div>
+<div class="px-6 pt-2 pb-4">
+<div class="flex items-center space-x-3 text-gray-400">
+<span class="text-sm">分享:</span>
+<a class="hover:text-white" href="#"><i class="fab fa-weixin text-lg"></i></a>
+<a class="hover:text-white" href="#"><i class="fab fa-weibo text-lg"></i></a>
+<a class="hover:text-white" href="#"><i class="fab fa-twitter text-lg"></i></a>
+</div>
+</div>
+</div>
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
+<div>
+<img alt="最佳榜单文章" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYMegNycvhlbzfeST0-mVK0N5TIRA3LiFx5ZrD4uJJgBcWIHPRisrLJnqZ-K1UdcHpc47XS5kttEpx5Pl2350HKhHsz3bRUz2XFofPqPWYq6XNY30IE7pNb8PQgdB7KsaQFGqAYTnBH4S9JR5lEMG2bxuNr-twAfM30YYUXRVuHERInIPPNBjygnlG3xHwq6s62tBa-kEivqTlzRU6T3P3zJLWuMDeQgtzT-sTjIAMw7Ck_z6v5jjIliijY1xR5xdunNy2NN6_wRVo"/>
+<div class="p-6">
+<h3 class="font-bold text-xl mb-2 text-white">2025年度5款最佳AI绘画工具</h3>
+<p class="text-gray-500 text-sm mb-3">阅读时间：5分钟</p>
+<p class="text-gray-400 text-base">从 Midjourney 到 Stable Diffusion，哪款工具最适合你的创作？</p>
+<a class="inline-block mt-4 text-blue-400 hover:text-blue-300" href="#">查看榜单 →</a>
+</div>
+</div>
+<div class="px-6 pt-2 pb-4">
+<div class="flex items-center space-x-3 text-gray-400">
+<span class="text-sm">分享:</span>
+<a class="hover:text-white" href="#"><i class="fab fa-weixin text-lg"></i></a>
+<a class="hover:text-white" href="#"><i class="fab fa-weibo text-lg"></i></a>
+<a class="hover:text-white" href="#"><i class="fab fa-twitter text-lg"></i></a>
+</div>
+</div>
+</div>
+<div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
+<div>
+<img alt="深度对比文章" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBccus3Wfg77C5SF7CkGFycVgQz6MHyRX4Q1YiLRZczZwCVI6YuV1yiVKnOAHiaz76I-D5bJETpj3Z6uBV8EYLUIYsR8dg1D056x4DNP6xy703inTGA6-JW_qC0qyvDHFqgia97iFnKTGytapiJ_-XjH_el4LLjH3PT4vPIrK_FuhjIqymSP9f9FYd7tH3BtnXVnIFW-Gaz9GHJEy2SEoI_Sca326u_zMXHuuyK9XrSjveXuCm7nmqDRS2DpsQLo8nZWiLi0rJxdhc2"/>
+<div class="p-6">
+<h3 class="font-bold text-xl mb-2 text-white">ChatGPT vs. Claude：两大语言模型终极对决</h3>
+<p class="text-gray-500 text-sm mb-3">阅读时间：10分钟</p>
+<p class="text-gray-400 text-base">全方位对比分析，告诉你它们各自的优势和最佳应用场景。</p>
+<a class="inline-block mt-4 text-blue-400 hover:text-blue-300" href="#">阅读对比 →</a>
+</div>
+</div>
+<div class="px-6 pt-2 pb-4">
+<div class="flex items-center space-x-3 text-gray-400">
+<span class="text-sm">分享:</span>
+<a class="hover:text-white" href="#"><i class="fab fa-weixin text-lg"></i></a>
+<a class="hover:text-white" href="#"><i class="fab fa-weibo text-lg"></i></a>
+<a class="hover:text-white" href="#"><i class="fab fa-twitter text-lg"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-[#0d1117]" id="timeline">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-white mb-12">AI 进化时间轴</h2>
+<div class="flex flex-wrap justify-center gap-2 mb-12">
+<button class="bg-blue-600 text-white py-2 px-4 rounded-full text-sm transition-transform duration-300 transform hover:scale-105">全部</button>
+<button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-full text-sm transition-transform duration-300 transform hover:scale-105">文生图</button>
+<button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-full text-sm transition-transform duration-300 transform hover:scale-105">文生视频</button>
+<button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-full text-sm transition-transform duration-300 transform hover:scale-105">大语言模型</button>
+<button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-full text-sm transition-transform duration-300 transform hover:scale-105">效率工具</button>
+<button class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-full text-sm transition-transform duration-300 transform hover:scale-105">代码助手</button>
+</div>
+<div class="relative max-w-4xl mx-auto">
+<div class="absolute left-1/2 top-0 h-full w-0.5 bg-gray-700 transform -translate-x-1/2"></div>
+<div class="timeline-card relative mb-8 flex justify-between items-center w-full">
+<div class="order-1 w-5/12"></div>
+<div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
+<span class="material-icons mx-auto text-blue-400">auto_awesome</span>
+</div>
+<div class="order-1 bg-slate-800 rounded-lg shadow-xl w-5/12 px-6 py-4 border border-blue-500">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center">
+<img alt="Midjourney Logo" class="h-6 w-6 mr-2 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDklIT-_ISQazVdowrijwVlLNXBS3qzJNs41h3fqlhAmPdApS329PSdiEDDzUR25Ce6FRmntcE2uEKPabqoR3pmmErxCdVaL-ALEpc0CxV9tVga_emoIt4h4C3xPBueYv-zDFzZhUE3c_OEyz6b4RUEcEUPoQN2hpQXYriHGxU6iEXtiS7ReUfSb_hlQvPL25TUUHe4akJsrLT7aaAty1pwlx4Y8xpMl0MUwWubdjkdlvk18qpjl5eG8ngA4Xt0eLcJbFWutas9EhIx"/>
+<h3 class="font-bold text-lg text-white">Midjourney V6</h3>
+</div>
+<div class="text-yellow-400 font-bold">★★★★☆</div>
+</div>
+<p class="text-sm leading-snug tracking-wide text-gray-400">革命性的图像质量提升，更强的真实感和细节控制。</p>
+<p class="text-xs text-gray-500 mt-2">2023年12月21日</p>
+</div>
+</div>
+<div class="timeline-card relative mb-8 flex justify-between flex-row-reverse items-center w-full">
+<div class="order-1 w-5/12"></div>
+<div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
+<span class="material-icons mx-auto text-blue-400">videocam</span>
+</div>
+<div class="order-1 bg-slate-800 rounded-lg shadow-xl w-5/12 px-6 py-4">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center">
+<img alt="Sora Logo" class="h-6 w-6 mr-2 object-contain bg-white rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcHlvGVVZ5ptulxoFGBuCkyx-QKAPA6WnrVouDdIEfoYW53PJPha-kp2tUWl8s8TkWvi83eAB9LvJdPsHxwklCBZ9p4kas1D0MiCt749ZFvPiC2pMs6QDi1gHIUbQKUB4m9uuVRPqffiwZbzYzwv8wtQP3-1DwYzcrcaeWj-M_kJkVTpHmYWH5x8iLArNYOVwP0bPVyaHumtZDoFqyJM3GkYKZzVdqNCv1lBv8Cya33VJkHhZ-cWbd-PROXkOTPxPycEZdATZVqIzO"/>
+<h3 class="font-bold text-lg text-white">OpenAI Sora</h3>
+</div>
+<div class="text-yellow-400 font-bold">★★★★★</div>
+</div>
+<p class="text-sm leading-snug tracking-wide text-gray-400">文生视频领域的里程碑，生成长达一分钟的高清视频。</p>
+<p class="text-xs text-gray-500 mt-2">2024年2月15日</p>
+</div>
+</div>
+<div class="timeline-card relative mb-8 flex justify-between items-center w-full">
+<div class="order-1 w-5/12"></div>
+<div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
+<span class="material-icons mx-auto text-blue-400">chat</span>
+</div>
+<div class="order-1 bg-slate-800 rounded-lg shadow-xl w-5/12 px-6 py-4">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center">
+<img alt="Claude 3 Logo" class="h-6 w-6 mr-2 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHEJs_EdQWQuneMc45IG1tcMeLo1djUDnOPL86esRbEeYtxlXjESCIQFvS9wziyFEwdDPBxH0CP850R9E_NwglDAx_f2JpG2BWP9Z6ReEmnMlsTrEIh2hAIhnvzof_sOq6w_vQuTo7FxoDxCgo-dmdVayH6ox2kz3Q_hHco5u7hxjYfixiKEBpUU_n3AQRmYJPXf4legQI46JyQAcIpoFuCIYSPn1k_gPJhulmE8CRPLsmS6L6z_nP7JKUjv5IZax-v8kVvYgFjF7_"/>
+<h3 class="font-bold text-lg text-white">Claude 3</h3>
+</div>
+<div class="text-yellow-400 font-bold">★★★★★</div>
+</div>
+<p class="text-sm leading-snug tracking-wide text-gray-400">性能全面超越GPT-4，拥有更强的多模态能力和更长上下文。</p>
+<p class="text-xs text-gray-500 mt-2">2024年3月4日</p>
+</div>
+</div>
+<div class="timeline-card relative mb-8 flex justify-between flex-row-reverse items-center w-full">
+<div class="order-1 w-5/12"></div>
+<div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
+<span class="material-icons mx-auto text-blue-400">code</span>
+</div>
+<div class="order-1 bg-slate-800 rounded-lg shadow-xl w-5/12 px-6 py-4 border border-blue-500">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center">
+<img alt="Devin Logo" class="h-6 w-6 mr-2 object-contain bg-white rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_x4sXUwclEmTnZ7uQju6eH6pZ8CzQOvoe-vGyXZbMqcld7jwgYeN1yLDipJOJjywDG6LLPDIC2FkXp5qpN8fcvJjjzrg4IBtjszGbMCqOKSyJpiId-P_tPQyX-HtzRHZ2GSqCZtRR3fAagsEi88NYKLhzJQ1Ox4cyXBUE9UfvhBRDqV-Qxds_-pCvXNzNBLxTViGI612vErp0tqH4lldVl4GY8upPS_AYNK7GokTZLBhB9Fi16FBc5pw8Vw6549Cc9d0SVPr_NPOY"/>
+<h3 class="font-bold text-lg text-white">Devin</h3>
+</div>
+<div class="text-yellow-400 font-bold">★★★★☆</div>
+</div>
+<p class="text-sm leading-snug tracking-wide text-gray-400">全球首位AI软件工程师，能够自主完成端到端的开发任务。</p>
+<p class="text-xs text-gray-500 mt-2">2024年3月12日</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-900" id="featured-comparisons">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-white mb-12">深度对决</h2>
+<div class="relative max-w-5xl mx-auto">
+<div class="flex overflow-x-auto snap-x snap-mandatory pb-8 scrollbar-hide space-x-8">
+<div class="snap-center flex-shrink-0 w-full md:w-[calc(50%-1rem)]">
+<a class="bg-slate-800 p-8 rounded-lg text-center block h-full transform hover:scale-105 transition duration-300" href="#">
+<div class="flex justify-center items-center">
+<img alt="Midjourney Logo" class="h-20 w-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC13LZZLtUCrRWatN2GK7V1CThKf0AEH2jFrKI9VPYymCQcFBoCY49OrVuGClmN-s8Nk9CE4c4V16o9z3kmpf84-1Q8HVQwtlsL2DQ2v6xQ7HWSsA54h-Mf3r8CHR0a7tRIZ_CvrEpXQ1nm9d2P5QiDVQwmevXWqgbVgTMwqPFEFNPe04iAAbqaXBnVxR-akfuneT1r3uUyGlUEqXw07JT_95xYc8U277Z7F-HMGhVhfVfdPe2Qcmb4qmBiD6XUtef0OE0NHln64jr"/>
+<span class="text-4xl font-bold text-gray-500 mx-6">VS.</span>
+<img alt="Stable Diffusion Logo" class="h-20 w-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Aq6lMNq2IBK6Q8cqN5p9k3bBeMDuxkQgPxuWmzbJMb-zezma9Zrq0qMX9a-sD44nXbYR4eRgvrhkqfJgATpDtxqGmwxNAQC0HwsRDC6EKvDgdV7_wwxZFDvePqKe69zTWXiNeR1CCMDkYGEYM5OY0WQs4tgd5GcxcOZHQpifq8jwBM5CXO53TT4OuEcRzXiXGtf6eScSJ36ljz7E8uuwkhtKSJbVZr--7PI5l5I0JyOuO1x_YVGZlHDsDnWfoEZa249BOGjWBB0m"/>
+</div>
+<h3 class="text-white text-2xl font-bold mt-6">Midjourney vs. Stable Diffusion</h3>
+<p class="text-gray-400 mt-2">艺术性与开源灵活性的终极较量</p>
+</a>
+</div>
+<div class="snap-center flex-shrink-0 w-full md:w-[calc(50%-1rem)]">
+<a class="bg-slate-800 p-8 rounded-lg text-center block h-full transform hover:scale-105 transition duration-300" href="#">
+<div class="flex justify-center items-center">
+<img alt="ChatGPT Logo" class="h-20 w-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAobAAsUBOf0y4ebFtOBsnRh_3QJ3qk_I05LtjYqScfAq_UeIl3d0zVx9lRxTykPViAYO3j0OqslL3czdwzfuN47ZkGGgfbveqkL7sK5GRSNfPAjg2q2pKinFJwZgdrY78j1CwdB0XcEPYI6kXXcC8_Lro4ywhTyYvbvPCDR0lSyeGYAOq4T18NEmb138n7AmP_MRL4SbNIVKR13_guoyzLeEXFY1txoQZADA8nBKHNYMLd3JSUslph0bvPcEH-nkQ0RU-iXLwrRX4y"/>
+<span class="text-4xl font-bold text-gray-500 mx-6">VS.</span>
+<img alt="Claude Logo" class="h-20 w-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-8fWa8pPhIIBzsB3fHQBdF6lP7oYPutFAidbRoOu79wgEDENwEavkddvDuloI_GqgtZgCE8mVkl8DbFO14jH2D8pkcH5FwJ-ipNyVeJZ8jn3sHRHm23TVA0WvXBZ9IvdfoMcb5LxzdFU6fv6cjGlKGL1KqPXnYkDqGA1Ghp35tsvKVqip1AHvKck5y7jrhdbx2nObC92n-OwIKAZOacx6lPSLFF5ED6OGRrKXv_f21kOJSSrxOAfS3LiytEQliIMSr4VnQoba6JKJ"/>
+</div>
+<h3 class="text-white text-2xl font-bold mt-6">ChatGPT vs. Claude</h3>
+<p class="text-gray-400 mt-2">两大顶级语言模型的全面横评</p>
+</a>
+</div>
+<div class="snap-center flex-shrink-0 w-full md:w-[calc(50%-1rem)]">
+<a class="bg-slate-800 p-8 rounded-lg text-center block h-full transform hover:scale-105 transition duration-300" href="#">
+<div class="flex justify-center items-center">
+<img alt="Sora Logo" class="h-20 w-20 bg-white rounded-md p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcHlvGVVZ5ptulxoFGBuCkyx-QKAPA6WnrVouDdIEfoYW53PJPha-kp2tUWl8s8TkWvi83eAB9LvJdPsHxwklCBZ9p4kas1D0MiCt749ZFvPiC2pMs6QDi1gHIUbQKUB4m9uuVRPqffiwZbzYzwv8wtQP3-1DwYzcrcaeWj-M_kJkVTpHmYWH5x8iLArNYOVwP0bPVyaHumtZDoFqyJM3GkYKZzVdqNCv1lBv8Cya33VJkHhZ-cWbd-PROXkOTPxPycEZdATZVqIzO"/>
+<span class="text-4xl font-bold text-gray-500 mx-6">VS.</span>
+<img alt="Runway Logo" class="h-20 w-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7yX_g2V4R-zD3e2rI6oM7k-Qy8z2G-8Qj4m-W-uLpY0Z-9Qz6t-c-7F-w3-R-a-lPq-s-Y-o-x-R-z-y-X-w"/>
+</div>
+<h3 class="text-white text-2xl font-bold mt-6">Sora vs. Runway</h3>
+<p class="text-gray-400 mt-2">文生视频领域的王者之争</p>
+</a>
+</div>
+</div>
+<div class="flex justify-center mt-8 space-x-2 md:hidden">
+<button class="w-8 h-2 bg-slate-600 rounded-full"></button>
+<button class="w-2 h-2 bg-slate-400 rounded-full"></button>
+<button class="w-2 h-2 bg-slate-400 rounded-full"></button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-[#0d1117]">
+<div class="container mx-auto px-4 max-w-6xl">
+<h2 class="text-3xl font-bold text-center text-white mb-12">用户之声</h2>
+<div class="grid md:grid-cols-2 gap-12 items-start">
+<div class="space-y-8">
+<div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+<div class="flex items-start">
+<img alt="用户头像" class="w-12 h-12 rounded-full mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA8-kC21DcF8sj0wmn79jhrSPG56b-ynJzBanqNJmLQeFRoJI7cBNUZzKHQWFWxghk7OvnDyMpZQVYXOo4DtBeGMvXlXNtRc7QkTHx1tlfmLyXJwSWcCmwbxrPLjwt7vL3Ok7nTDDeIYbhztVwNLdjyBi8S_j8yKNzSdQSTqz0m2gceJ-Cz9_2kyqdrSqazSAUUCWwmtasLflDUyrZtjp2bIXxNzhPc5Hwje4NKdyJ0oqwO23dwzYO5md2R0X1GgQIsY-ndFzDysqc"/>
+<div>
+<div class="flex items-center justify-between">
+<h4 class="font-bold text-white">科技爱好者</h4>
+<div class="text-yellow-400 flex items-center">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>
+</div>
+<p class="text-gray-400 mt-2">“这里的评测非常客观，帮助我快速了解了各个AI工具的优缺点，节省了大量研究时间！”</p>
+</div>
+</div>
+</div>
+<div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+<div class="flex items-start">
+<img alt="用户头像" class="w-12 h-12 rounded-full mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvUMKRv_vWEg3jGHk9rMhIhfIOd59F-_r1CzgJly_xECGdGdatP1FBJTazDNcdgeMH3vDSeB4p7Mbu6aEuPwjn0oLYPn6YkMab0LYhT4tJp5wNhTn4L9KWGSk9_oR_H-KEdTNMJzNBSGm54w3ooilWZiUmR3xVamW7YeVCFYdyartK2nRUnIC3plok-yaCUQ_FR_b8g9bHBlfAdQRr-fQ8ufQ9KwAfxd1YQGAai7aLn4mOZn3_br_S7Qw41nhUTA9ridWxDuhXnAnx"/>
+<div>
+<div class="flex items-center justify-between">
+<h4 class="font-bold text-white">设计师</h4>
+<div class="text-yellow-400 flex items-center">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+</div>
+</div>
+<p class="text-gray-400 mt-2">“AI绘画工具的对比评测太棒了！希望未来能有更多关于设计和创意工作流的评测内容。”</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-slate-800 p-8 rounded-lg">
+<h3 class="text-2xl font-bold text-white mb-6">分享你的看法</h3>
+<form>
+<div class="mb-4">
+<label class="block text-gray-400 mb-2" for="name">昵称</label>
+<input class="w-full bg-slate-900 border border-slate-700 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" id="name" type="text"/>
+</div>
+<div class="mb-4">
+<label class="block text-gray-400 mb-2" for="feedback">你的反馈</label>
+<textarea class="w-full bg-slate-900 border border-slate-700 rounded-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" id="feedback" rows="4"></textarea>
+</div>
+<div class="mb-6">
+<label class="block text-gray-400 mb-2">评分</label>
+<div class="flex items-center space-x-1 text-yellow-400 text-2xl">
+<i class="far fa-star cursor-pointer hover:text-yellow-300"></i>
+<i class="far fa-star cursor-pointer hover:text-yellow-300"></i>
+<i class="far fa-star cursor-pointer hover:text-yellow-300"></i>
+<i class="far fa-star cursor-pointer hover:text-yellow-300"></i>
+<i class="far fa-star cursor-pointer hover:text-yellow-300"></i>
+</div>
+</div>
+<button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full" type="submit">提交反馈</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-900">
+<div class="container mx-auto px-4 max-w-6xl">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-white">关于本站</h2>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-12 bg-slate-800 p-10 rounded-lg">
+<div class="md:w-1/2">
+<img alt="博主头像" class="w-32 h-32 rounded-full object-cover mx-auto md:mx-0 mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcmY4qIJHvmnyMunv5LggxjO9zVEA_0fIYd80-jH4jbILuz8zQJ-cvmeNeqnEqAMC4MU3eSQJ3oTMo4VFGMZHEM9PgQcUPV_8phLMm7bvTX1RDociJsU70Jw1UmdE8-uudmKLBr-QY61aGnEn8yBSjTGONHVA07GQrkBlnzaZKqtgMSJQMDCoaDD7-ndOKk-IrVkCKTNc7d3l3l3s433Bd6a2xpuTZkZkLbaWG1gAL0VLdUNHZex2DQZg6rCzzPhV194YhlXewauj6"/>
+<div>
+<p class="text-gray-300 mb-4">
+                                                在这个信息爆炸的AI时代，每天都有无数新工具诞生。我创建这个博客，旨在通过亲身实测和深度分析，为你提供最公正、最深入的AI产品评测。
+                                        </p>
+<p class="text-gray-300 font-semibold">
+                                                我的使命是：在AI的浪潮中，为你过滤噪音，找到真正有价值的工具。
+                                        </p>
+</div>
+</div>
+<div class="md:w-1/2">
+<div class="relative aspect-video rounded-lg overflow-hidden shadow-2xl group">
+<img alt="视频介绍缩略图" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZq0Y9t5w0nD9V9igH5GFKxJA5ysstRpaLz9IPhYGoM6Wqra8O6tzaVCdUOkBoKzaHtqiO8hIWp0-Aol7G6bfIkfR7yEYgbhwdXzUTjq0Ijnm_4Kjo6ge_pLd-C4PRwNMjVcjQAx5Q9xc8dXRnwEV1Ycv4cbOXYum1ggF7I8I1ZEW24KhC5VDa79VQiIsO2VeJwW3rWGKWYyCbhUSod_dzCQ213pMFZM63BGGrPETiPqF8zuLcz42omDknFEWhwH2DluQaQoHOn--V"/>
+<div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+<button class="text-white transform transition-transform duration-300 group-hover:scale-125">
+<span class="material-icons text-7xl" style="text-shadow: 0 0 15px rgba(0,0,0,0.7);">play_circle_filled</span>
+</button>
+</div>
+</div>
+<p class="text-center text-gray-400 mt-4 text-sm">观看视频，了解我们的评测理念</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-[#0d1117]">
+<div class="container mx-auto px-4 max-w-4xl" x-data="{ open: 1 }">
+<h2 class="text-3xl font-bold text-center text-white mb-12">常见问题 (FAQ)</h2>
+<div class="space-y-4">
+<div class="bg-slate-800 rounded-lg border border-slate-700">
+<button @click="open = (open === 1 ? 0 : 1)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+<h3 class="text-lg font-semibold text-white">你们的评测是收费的吗？</h3>
+<span :class="{'rotate-45': open === 1}" class="material-icons text-white transform transition-transform">add</span>
+</button>
+<div class="px-6 pb-6 text-gray-400" style="display: none;" x-show="open === 1">
+<p>我们所有的评测文章和内容都是免费向所有用户开放的。我们的运营资金来源于网站广告和部分工具的联盟营销链接，但这绝不会影响我们评测的中立性和客观性。</p>
+</div>
+</div>
+<div class="bg-slate-800 rounded-lg border border-slate-700">
+<button @click="open = (open === 2 ? 0 : 2)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+<h3 class="text-lg font-semibold text-white">我如何推荐一个产品给你们评测？</h3>
+<span :class="{'rotate-45': open === 2}" class="material-icons text-white transform transition-transform">add</span>
+</button>
+<div class="px-6 pb-6 text-gray-400" style="display: none;" x-show="open === 2">
+<p>非常欢迎！您可以通过页脚的联系方式或社交媒体账号给我们发送消息，提供您希望我们评测的AI产品名称和相关信息。我们会将其纳入我们的评测候选列表。</p>
+</div>
+</div>
+<div class="bg-slate-800 rounded-lg border border-slate-700">
+<button @click="open = (open === 3 ? 0 : 3)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+<h3 class="text-lg font-semibold text-white">你们如何保证评测的公正性？</h3>
+<span :class="{'rotate-45': open === 3}" class="material-icons text-white transform transition-transform">add</span>
+</button>
+<div class="px-6 pb-6 text-gray-400" style="display: none;" x-show="open === 3">
+<p>公正性是我们的核心原则。我们的评测团队独立运作，不受厂商干扰。我们会从多个维度进行测试，包括性能、易用性、价格和用户支持，并结合真实的用例来展示产品的优缺点。</p>
+</div>
+</div>
+<div class="bg-slate-800 rounded-lg border border-slate-700">
+<button @click="open = (open === 4 ? 0 : 4)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+<h3 class="text-lg font-semibold text-white">时间轴上的“星级”是如何评定的？</h3>
+<span :class="{'rotate-45': open === 4}" class="material-icons text-white transform transition-transform">add</span>
+</button>
+<div class="px-6 pb-6 text-gray-400" style="display: none;" x-show="open === 4">
+<p>星级代表了该产品或技术更新在发布时对其所在领域的“颠覆性”和“影响力”。这是一个相对的评估，主要考量其技术创新程度、对行业格局的改变以及对用户的价值。五星表示具有里程碑式的意义。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-gray-400">
+<div class="container mx-auto px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h3 class="text-white font-bold text-lg mb-4">AI 产品指南针</h3>
+<p class="text-sm">在AI的浪潮中，为你过滤噪音。</p>
+<div class="flex space-x-4 mt-6">
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><i class="fab fa-weixin fa-lg"></i></a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><i class="fab fa-weibo fa-lg"></i></a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><i class="fab fa-twitter fa-lg"></i></a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><span class="material-icons">email</span></a>
+</div>
+</div>
+<div>
+<h3 class="text-white font-semibold mb-4">快速链接</h3>
+<ul>
+<li class="mb-2"><a class="hover:text-white" href="#">文生图</a></li>
+<li class="mb-2"><a class="hover:text-white" href="#">文生视频</a></li>
+<li class="mb-2"><a class="hover:text-white" href="#">大语言模型</a></li>
+<li class="mb-2"><a class="hover:text-white" href="#">效率工具</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-white font-semibold mb-4">关于</h3>
+<ul>
+<li class="mb-2"><a class="hover:text-white" href="#">关于我们</a></li>
+<li class="mb-2"><a class="hover:text-white" href="#">联系方式</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-white font-semibold mb-4">订阅更新</h3>
+<p class="text-sm mb-4">获取最新AI产品评测，不错过任何重大更新。</p>
+<form class="flex">
+<input class="w-full bg-gray-800 border border-gray-700 rounded-l-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="你的邮箱" type="email"/>
+<button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md">订阅</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
+<p>© 2024 AI 产品指南针. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<style>
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+[x-cloak] { display: none !important; }
+</style>
+</body></html>

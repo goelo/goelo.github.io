@@ -1,0 +1,177 @@
+/* Global styles for the Astro project */
+
+/* Import Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom components */
+@layer components {
+  /* Button variants */
+  .btn-primary {
+    @apply bg-accent-600 hover:bg-accent-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 focus:ring-offset-dark-surface;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-dark-border hover:border-accent-600 text-dark-text-primary hover:text-accent-400 font-semibold py-3 px-6 rounded-lg transition-all duration-200 hover:bg-accent-600/5;
+  }
+
+  /* Card component */
+  .card {
+    @apply bg-dark-surface border border-dark-border rounded-xl p-6 hover:border-accent-600/50 transition-all duration-300;
+  }
+
+  /* Form inputs */
+  .form-input {
+    @apply w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-lg text-dark-text-primary placeholder-dark-text-muted focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors;
+  }
+
+  /* Navigation link */
+  .nav-link {
+    @apply text-dark-text-secondary hover:text-dark-text-primary transition-colors;
+  }
+
+  /* Content prose styling */
+  .prose-dark {
+    @apply prose prose-lg prose-invert max-w-none;
+  }
+
+  .prose-dark h1,
+  .prose-dark h2,
+  .prose-dark h3,
+  .prose-dark h4,
+  .prose-dark h5,
+  .prose-dark h6 {
+    @apply text-dark-text-primary;
+  }
+
+  .prose-dark p {
+    @apply text-dark-text-secondary;
+  }
+
+  .prose-dark a {
+    @apply text-accent-400 hover:text-accent-300 transition-colors;
+  }
+
+  .prose-dark code {
+    @apply bg-dark-bg px-2 py-1 rounded text-accent-400 text-sm;
+  }
+
+  .prose-dark pre {
+    @apply bg-dark-bg border border-dark-border rounded-lg;
+  }
+
+  .prose-dark blockquote {
+    @apply border-l-4 border-accent-600 bg-dark-surface/50;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounceGentle 0.6s ease-in-out;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-400 to-accent-600 bg-clip-text text-transparent;
+  }
+
+  /* Glass effect */
+  .glass {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    @apply bg-dark-surface/80 border border-dark-border/50;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Custom shadow */
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+  }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

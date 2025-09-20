@@ -1,0 +1,154 @@
+---
+interface QuickLink {
+  text: string;
+  href: string;
+}
+
+interface AboutLink {
+  text: string;
+  href: string;
+}
+
+interface SocialLink {
+  icon: string;
+  href: string;
+  type: 'fontawesome' | 'material';
+}
+
+const quickLinks: QuickLink[] = [
+  { text: '文生图', href: '#' },
+  { text: '文生视频', href: '#' },
+  { text: '大语言模型', href: '#' },
+  { text: '效率工具', href: '#' }
+];
+
+const aboutLinks: AboutLink[] = [
+  { text: '关于我们', href: '#' },
+  { text: '联系方式', href: '#' }
+];
+
+const socialLinks: SocialLink[] = [
+  { icon: 'fab fa-weixin fa-lg', href: '#', type: 'fontawesome' },
+  { icon: 'fab fa-weibo fa-lg', href: '#', type: 'fontawesome' },
+  { icon: 'fab fa-twitter fa-lg', href: '#', type: 'fontawesome' },
+  { icon: 'email', href: '#', type: 'material' }
+];
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-gray-400">
+  <div class="container mx-auto px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Company Info Column -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-4">AI 产品指南针</h3>
+        <p class="text-sm">在AI的浪潮中，为你过滤噪音。</p>
+        <div class="flex space-x-4 mt-6">
+          {socialLinks.map((social) => (
+            <a
+              class="text-gray-400 hover:text-white transition-colors"
+              href={social.href}
+              aria-label={`Social media link`}
+            >
+              {social.type === 'fontawesome' ? (
+                <i class={social.icon}></i>
+              ) : (
+                <span class="material-icons">{social.icon}</span>
+              )}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">快速链接</h3>
+        <ul>
+          {quickLinks.map((link) => (
+            <li class="mb-2">
+              <a class="hover:text-white" href={link.href}>
+                {link.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- About Column -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">关于</h3>
+        <ul>
+          {aboutLinks.map((link) => (
+            <li class="mb-2">
+              <a class="hover:text-white" href={link.href}>
+                {link.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Email Subscription Column -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">订阅更新</h3>
+        <p class="text-sm mb-4">获取最新AI产品评测，不错过任何重大更新。</p>
+        <form class="flex" id="newsletter-form">
+          <input
+            class="w-full bg-gray-800 border border-gray-700 rounded-l-md py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="你的邮箱"
+            type="email"
+            name="email"
+            required
+            aria-label="Email address for newsletter subscription"
+          />
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md transition-colors"
+            type="submit"
+            aria-label="Subscribe to newsletter"
+          >
+            订阅
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
+      <p>© {currentYear} AI 产品指南针. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Newsletter form handling
+  document.getElementById('newsletter-form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    const email = formData.get('email');
+
+    if (email) {
+      // Add your newsletter subscription logic here
+      console.log('Newsletter subscription for:', email);
+      alert('感谢订阅！我们会将最新AI产品评测发送到您的邮箱。');
+      (e.target as HTMLFormElement).reset();
+    }
+  });
+</script>
+
+<style>
+  /* Ensure consistent font loading for icons */
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+  /* Additional hover effects for better UX */
+  footer a:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  /* Smooth transitions for all interactive elements */
+  footer a,
+  footer button {
+    transition: all 0.2s ease-in-out;
+  }
+</style>

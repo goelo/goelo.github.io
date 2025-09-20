@@ -1,0 +1,185 @@
+---
+export interface TimelineItem {
+  id: string;
+  name: string;
+  logo: string;
+  rating: number;
+  description: string;
+  date: string;
+  category: string;
+  icon: string;
+  featured?: boolean;
+}
+
+const timelineItems: TimelineItem[] = [
+  {
+    id: 'midjourney-v6',
+    name: 'Midjourney V6',
+    logo: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDklIT-_ISQazVdowrijwVlLNXBS3qzJNs41h3fqlhAmPdApS329PSdiEDDzUR25Ce6FRmntcE2uEKPabqoR3pmmErxCdVaL-ALEpc0CxV9tVga_emoIt4h4C3xPBueYv-zDFzZhUE3c_OEyz6b4RUEcEUPoQN2hpQXYriHGxU6iEXtiS7ReUfSb_hlQvPL25TUUHe4akJsrLT7aaAty1pwlx4Y8xpMl0MUwWubdjkdlvk18qpjl5eG8ngA4Xt0eLcJbFWutas9EhIx',
+    rating: 4,
+    description: '革命性的图像质量提升，更强的真实感和细节控制。',
+    date: '2023年12月21日',
+    category: '文生图',
+    icon: 'auto_awesome',
+    featured: true
+  },
+  {
+    id: 'openai-sora',
+    name: 'OpenAI Sora',
+    logo: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDcHlvGVVZ5ptulxoFGBuCkyx-QKAPA6WnrVouDdIEfoYW53PJPha-kp2tUWl8s8TkWvi83eAB9LvJdPsHxwklCBZ9p4kas1D0MiCt749ZFvPiC2pMs6QDi1gHIUbQKUB4m9uuVRPqffiwZbzYzwv8wtQP3-1DwYzcrcaeWj-M_kJkVTpHmYWH5x8iLArNYOVwP0bPVyaHumtZDoFqyJM3GkYKZzVdqNCv1lBv8Cya33VJkHhZ-cWbd-PROXkOTPxPycEZdATZVqIzO',
+    rating: 5,
+    description: '文生视频领域的里程碑，生成长达一分钟的高清视频。',
+    date: '2024年2月15日',
+    category: '文生视频',
+    icon: 'videocam'
+  },
+  {
+    id: 'claude-3',
+    name: 'Claude 3',
+    logo: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAHEJs_EdQWQuneMc45IG1tcMeLo1djUDnOPL86esRbEeYtxlXjESCIQFvS9wziyFEwdDPBxH0CP850R9E_NwglDAx_f2JpG2BWP9Z6ReEmnMlsTrEIh2hAIhnvzof_sOq6w_vQuTo7FxoDxCgo-dmdVayH6ox2kz3Q_hHco5u7hxjYfixiKEBpUU_n3AQRmYJPXf4legQI46JyQAcIpoFuCIYSPn1k_gPJhulmE8CRPLsmS6L6z_nP7JKUjv5IZax-v8kVvYgFjF7_',
+    rating: 5,
+    description: '性能全面超越GPT-4，拥有更强的多模态能力和更长上下文。',
+    date: '2024年3月4日',
+    category: '大语言模型',
+    icon: 'chat'
+  },
+  {
+    id: 'devin',
+    name: 'Devin',
+    logo: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC_x4sXUwclEmTnZ7uQju6eH6pZ8CzQOvoe-vGyXZbMqcld7jwgYeN1yLDipJOJjywDG6LLPDIC2FkXp5qpN8fcvJjjzrg4IBtjszGbMCqOKSyJpiId-P_tPQyX-HtzRHZ2GSqCZtRR3fAagsEi88NYKLhzJQ1Ox4cyXBUE9UfvhBRDqV-Qxds_-pCvXNzNBLxTViGI612vErp0tqH4lldVl4GY8upPS_AYNK7GokTZLBhB9Fi16FBc5pw8Vw6549Cc9d0SVPr_NPOY',
+    rating: 4,
+    description: '全球首位AI软件工程师，能够自主完成端到端的开发任务。',
+    date: '2024年3月12日',
+    category: '代码助手',
+    icon: 'code',
+    featured: true
+  }
+];
+
+const categories = ['全部', '文生图', '文生视频', '大语言模型', '效率工具', '代码助手'];
+---
+
+<section class="py-20 bg-[#0d1117]" id="timeline">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-white mb-12">AI 进化时间轴</h2>
+
+    <!-- Filter Buttons -->
+    <div
+      class="flex flex-wrap justify-center gap-2 mb-12"
+      x-data="{ activeCategory: '全部' }"
+    >
+      {categories.map((category) => (
+        <button
+          class="py-2 px-4 rounded-full text-sm transition-transform duration-300 transform hover:scale-105"
+          :class="activeCategory === '{category}' ? 'bg-blue-600 text-white' : 'bg-gray-700 hover:bg-gray-600 text-white'"
+          @click="activeCategory = '{category}'"
+          x-text="'{category}'"
+        >
+        </button>
+      ))}
+    </div>
+
+    <!-- Timeline Container -->
+    <div class="relative max-w-4xl mx-auto" x-data="{ activeCategory: '全部' }">
+      <!-- Center Line -->
+      <div class="absolute left-1/2 top-0 h-full w-0.5 bg-gray-700 transform -translate-x-1/2"></div>
+
+      {timelineItems.map((item, index) => {
+        const isLeft = index % 2 === 0;
+        const cardClasses = isLeft
+          ? "timeline-card relative mb-8 flex justify-between items-center w-full"
+          : "timeline-card relative mb-8 flex justify-between flex-row-reverse items-center w-full";
+
+        const borderClass = item.featured ? "border border-blue-500" : "";
+
+        return (
+          <div
+            class={cardClasses}
+            x-show="activeCategory === '全部' || activeCategory === '{item.category}'"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform scale-95"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 transform scale-100"
+            x-transition:leave-end="opacity-0 transform scale-95"
+          >
+            <!-- Spacer -->
+            <div class="order-1 w-5/12"></div>
+
+            <!-- Center Icon -->
+            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
+              <span class="material-icons mx-auto text-blue-400">{item.icon}</span>
+            </div>
+
+            <!-- Card Content -->
+            <div class={`order-1 bg-slate-800 rounded-lg shadow-xl w-5/12 px-6 py-4 ${borderClass}`}>
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center">
+                  <img
+                    alt={`${item.name} Logo`}
+                    class={`h-6 w-6 mr-2 object-contain ${item.name === 'OpenAI Sora' ? 'bg-white rounded-sm' : ''} ${item.name === 'Devin' ? 'bg-white rounded-full' : ''}`}
+                    src={item.logo}
+                  />
+                  <h3 class="font-bold text-lg text-white">{item.name}</h3>
+                </div>
+                <div class="text-yellow-400 font-bold">
+                  {'★'.repeat(item.rating)}{'☆'.repeat(5 - item.rating)}
+                </div>
+              </div>
+              <p class="text-sm leading-snug tracking-wide text-gray-400">{item.description}</p>
+              <p class="text-xs text-gray-500 mt-2">{item.date}</p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Ensure Material Icons are loaded */
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+  /* Timeline animations */
+  .timeline-card {
+    opacity: 1;
+  }
+
+  /* Hover effects for timeline cards */
+  .timeline-card:hover .bg-slate-800 {
+    @apply transform scale-105 transition-transform duration-300;
+  }
+
+  /* Enhanced border animation for featured items */
+  .border-blue-500 {
+    animation: borderGlow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes borderGlow {
+    from {
+      border-color: rgb(59 130 246);
+      box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+    }
+    to {
+      border-color: rgb(96 165 250);
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+    }
+  }
+</style>
+
+<script>
+  // Enhance filter functionality with smooth transitions
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('timelineFilter', () => ({
+      activeCategory: '全部',
+
+      filterItems(category: string) {
+        this.activeCategory = category;
+      },
+
+      isVisible(itemCategory: string) {
+        return this.activeCategory === '全部' || this.activeCategory === itemCategory;
+      }
+    }));
+  });
+</script>

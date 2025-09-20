@@ -1,0 +1,123 @@
+---
+// TypeScript interface for comparison data structure
+interface ComparisonItem {
+  id: string;
+  title: string;
+  description: string;
+  leftProduct: {
+    name: string;
+    logo: string;
+    alt: string;
+  };
+  rightProduct: {
+    name: string;
+    logo: string;
+    alt: string;
+  };
+  href: string;
+}
+
+// Comparison data with exact content from HTML
+const comparisons: ComparisonItem[] = [
+  {
+    id: "midjourney-vs-stable-diffusion",
+    title: "Midjourney vs. Stable Diffusion",
+    description: "艺术性与开源灵活性的终极较量",
+    leftProduct: {
+      name: "Midjourney",
+      logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuDC13LZZLtUCrRWatN2GK7V1CThKf0AEH2jFrKI9VPYymCQcFBoCY49OrVuGClmN-s8Nk9CE4c4V16o9z3kmpf84-1Q8HVQwtlsL2DQ2v6xQ7HWSsA54h-Mf3r8CHR0a7tRIZ_CvrEpXQ1nm9d2P5QiDVQwmevXWqgbVgTMwqPFEFNPe04iAAbqaXBnVxR-akfuneT1r3uUyGlUEqXw07JT_95xYc8U277Z7F-HMGhVhfVfdPe2Qcmb4qmBiD6XUtef0OE0NHln64jr",
+      alt: "Midjourney Logo"
+    },
+    rightProduct: {
+      name: "Stable Diffusion",
+      logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuA6Aq6lMNq2IBK6Q8cqN5p9k3bBeMDuxkQgPxuWmzbJMb-zezma9Zrq0qMX9a-sD44nXbYR4eRgvrhkqfJgATpDtxqGmwxNAQC0HwsRDC6EKvDgdV7_wwxZFDvePqKe69zTWXiNeR1CCMDkYGEYM5OY0WQs4tgd5GcxcOZHQpifq8jwBM5CXO53TT4OuEcRzXiXGtf6eScSJ36ljz7E8uuwkhtKSJbVZr--7PI5l5I0JyOuO1x_YVGZlHDsDnWfoEZa249BOGjWBB0m",
+      alt: "Stable Diffusion Logo"
+    },
+    href: "#"
+  },
+  {
+    id: "chatgpt-vs-claude",
+    title: "ChatGPT vs. Claude",
+    description: "两大顶级语言模型的全面横评",
+    leftProduct: {
+      name: "ChatGPT",
+      logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuAobAAsUBOf0y4ebFtOBsnRh_3QJ3qk_I05LtjYqScfAq_UeIl3d0zVx9lRxTykPViAYO3j0OqslL3czdwzfuN47ZkGGgfbveqkL7sK5GRSNfPAjg2q2pKinFJwZgdrY78j1CwdB0XcEPYI6kXXcC8_Lro4ywhTyYvbvPCDR0lSyeGYAOq4T18NEmb138n7AmP_MRL4SbNIVKR13_guoyzLeEXFY1txoQZADA8nBKHNYMLd3JSUslph0bvPcEH-nkQ0RU-iXLwrRX4y",
+      alt: "ChatGPT Logo"
+    },
+    rightProduct: {
+      name: "Claude",
+      logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuC-8fWa8pPhIIBzsB3fHQBdF6lP7oYPutFAidbRoOu79wgEDENwEavkddvDuloI_GqgtZgCE8mVkl8DbFO14jH2D8pkcH5FwJ-ipNyVeJZ8jn3sHRHm23TVA0WvXBZ9IvdfoMcb5LxzdFU6fv6cjGlKGL1KqPXnYkDqGA1Ghp35tsvKVqip1AHvKck5y7jrhdbx2nObC92n-OwIKAZOacx6lPSLFF5ED6OGRrKXv_f21kOJSSrxOAfS3LiytEQliIMSr4VnQoba6JKJ",
+      alt: "Claude Logo"
+    },
+    href: "#"
+  },
+  {
+    id: "sora-vs-runway",
+    title: "Sora vs. Runway",
+    description: "文生视频领域的王者之争",
+    leftProduct: {
+      name: "Sora",
+      logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuDcHlvGVVZ5ptulxoFGBuCkyx-QKAPA6WnrVouDdIEfoYW53PJPha-kp2tUWl8s8TkWvi83eAB9LvJdPsHxwklCBZ9p4kas1D0MiCt749ZFvPiC2pMs6QDi1gHIUbQKUB4m9uuVRPqffiwZbzYzwv8wtQP3-1DwYzcrcaeWj-M_kJkVTpHmYWH5x8iLArNYOVwP0bPVyaHumtZDoFqyJM3GkYKZzVdqNCv1lBv8Cya33VJkHhZ-cWbd-PROXkOTPxPycEZdATZVqIzO",
+      alt: "Sora Logo"
+    },
+    rightProduct: {
+      name: "Runway",
+      logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuA7yX_g2V4R-zD3e2rI6oM7k-Qy8z2G-8Qj4m-W-uLpY0Z-9Qz6t-c-7F-w3-R-a-lPq-s-Y-o-x-R-z-y-X-w",
+      alt: "Runway Logo"
+    },
+    href: "#"
+  }
+];
+---
+
+<section class="py-20 bg-gray-900" id="featured-comparisons">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-white mb-12">深度对决</h2>
+    <div class="relative max-w-5xl mx-auto">
+      <div class="flex overflow-x-auto snap-x snap-mandatory pb-8 scrollbar-hide space-x-8">
+        {comparisons.map((comparison) => (
+          <div class="snap-center flex-shrink-0 w-full md:w-[calc(50%-1rem)]">
+            <a
+              class="bg-slate-800 p-8 rounded-lg text-center block h-full transform hover:scale-105 transition duration-300"
+              href={comparison.href}
+            >
+              <div class="flex justify-center items-center">
+                <img
+                  alt={comparison.leftProduct.alt}
+                  class={`h-20 w-20 ${comparison.leftProduct.name === 'Sora' ? 'bg-white rounded-md p-1' : ''}`}
+                  src={comparison.leftProduct.logo}
+                />
+                <span class="text-4xl font-bold text-gray-500 mx-6">VS.</span>
+                <img
+                  alt={comparison.rightProduct.alt}
+                  class="h-20 w-20"
+                  src={comparison.rightProduct.logo}
+                />
+              </div>
+              <h3 class="text-white text-2xl font-bold mt-6">{comparison.title}</h3>
+              <p class="text-gray-400 mt-2">{comparison.description}</p>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <!-- Mobile pagination dots -->
+      <div class="flex justify-center mt-8 space-x-2 md:hidden">
+        <button class="w-8 h-2 bg-slate-600 rounded-full"></button>
+        <button class="w-2 h-2 bg-slate-400 rounded-full"></button>
+        <button class="w-2 h-2 bg-slate-400 rounded-full"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hide scrollbar while maintaining scroll functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+</style>

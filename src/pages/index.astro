@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import FeaturedContent from '../components/FeaturedContent.astro';
+import AITimeline from '../components/AITimeline.astro';
+import Comparisons from '../components/Comparisons.astro';
+import UserReviews from '../components/UserReviews.astro';
+import About from '../components/About.astro';
+import FAQ from '../components/FAQ.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="AI工具评测博客 - 发现最有价值的AI产品"
+  description="专业的AI工具评测平台，通过深度测试和分析，为你推荐最值得使用的AI产品和服务。涵盖ChatGPT、Claude、Midjourney等热门工具的详细评测。"
+>
+  <div class="flex flex-col min-h-screen">
+    <Header />
+
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <Hero />
+
+      <!-- Featured Content Section -->
+      <FeaturedContent />
+
+      <!-- AI Timeline Section -->
+      <AITimeline />
+
+      <!-- Comparisons Section -->
+      <Comparisons />
+
+      <!-- User Reviews Section -->
+      <UserReviews />
+
+      <!-- About Section -->
+      <About />
+
+      <!-- FAQ Section -->
+      <FAQ />
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>
+
+<script>
+  // Initialize Alpine.js components when the page loads
+  document.addEventListener('alpine:init', () => {
+    // Any global Alpine.js initialization can go here
+    console.log('Alpine.js initialized');
+  });
+
+  // Add smooth scrolling for anchor links
+  document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scroll for navigation links
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Add scroll-to-top functionality
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    if (scrollToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.style.display = 'block';
+        } else {
+          scrollToTopBtn.style.display = 'none';
+        }
+      });
+
+      scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Add intersection observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in-up');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections for animation
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>
+
+<style>
+  /* Custom animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  /* Scroll to top button */
+  #scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(59, 130, 246, 0.9);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  #scroll-to-top:hover {
+    background: rgba(59, 130, 246, 1);
+    transform: scale(1.1);
+  }
+
+  /* Smooth transitions for all interactive elements */
+  a, button {
+    transition: all 0.2s ease;
+  }
+
+  /* Focus styles for accessibility */
+  a:focus,
+  button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  /* Print styles */
+  @media print {
+    nav,
+    .no-print {
+      display: none !important;
+    }
+
+    body {
+      background: white !important;
+      color: black !important;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .bg-gray-900 {
+      background-color: #000000 !important;
+    }
+
+    .text-gray-300 {
+      color: #ffffff !important;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
