@@ -11,13 +11,13 @@ const { class: className = '' } = Astro.props;
   <div class="container mx-auto px-4">
     <div class="flex justify-between items-center py-4">
       <!-- Logo/Brand -->
-      <a class="text-2xl font-bold text-white" href="#">AI 产品指南针</a>
+      <a class="text-2xl font-bold text-white uppercase tracking-wide" href="#">claim your spot</a>
 
-      <!-- Navigation -->
+      <!-- Navigation (temporarily hidden) -->
       <div class="hidden md:flex items-center space-x-6">
-        <a class="text-gray-300 hover:text-white transition-colors" href="#featured-content">最新评测</a>
+        <!-- <a class="text-gray-300 hover:text-white transition-colors" href="#featured-content">最新评测</a>
         <a class="text-gray-300 hover:text-white transition-colors" href="#timeline">AI 进化史</a>
-        <a class="text-gray-300 hover:text-white transition-colors" href="#featured-comparisons">深度对决</a>
+        <a class="text-gray-300 hover:text-white transition-colors" href="#featured-comparisons">深度对决</a> -->
       </div>
 
       <!-- Search Input -->
@@ -55,9 +55,9 @@ const { class: className = '' } = Astro.props;
       x-transition:leave-end="opacity-0 transform -translate-y-2"
     >
       <div class="px-2 pt-2 pb-3 space-y-1 bg-slate-900/95 border-t border-slate-700">
-        <a href="#featured-content" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors">最新评测</a>
+        <!-- <a href="#featured-content" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors">最新评测</a>
         <a href="#timeline" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors">AI 进化史</a>
-        <a href="#featured-comparisons" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors">深度对决</a>
+        <a href="#featured-comparisons" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors">深度对决</a> -->
         <!-- Mobile Search -->
         <div class="relative px-3 py-2">
           <input

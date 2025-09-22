@@ -56,31 +56,14 @@ const timelineItems: TimelineItem[] = [
   }
 ];
 
-const categories = ['全部', '文生图', '文生视频', '大语言模型', '效率工具', '代码助手'];
 ---
 
 <section class="py-20 bg-[#0d1117]" id="timeline">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center text-white mb-12">AI 进化时间轴</h2>
 
-    <!-- Filter Buttons -->
-    <div
-      class="flex flex-wrap justify-center gap-2 mb-12"
-      x-data="{ activeCategory: '全部' }"
-    >
-      {categories.map((category) => (
-        <button
-          class="py-2 px-4 rounded-full text-sm transition-transform duration-300 transform hover:scale-105"
-          :class="activeCategory === '{category}' ? 'bg-blue-600 text-white' : 'bg-gray-700 hover:bg-gray-600 text-white'"
-          @click="activeCategory = '{category}'"
-          x-text="'{category}'"
-        >
-        </button>
-      ))}
-    </div>
-
     <!-- Timeline Container -->
-    <div class="relative max-w-4xl mx-auto" x-data="{ activeCategory: '全部' }">
+    <div class="relative max-w-4xl mx-auto">
       <!-- Center Line -->
       <div class="absolute left-1/2 top-0 h-full w-0.5 bg-gray-700 transform -translate-x-1/2"></div>
 
@@ -93,16 +76,7 @@ const categories = ['全部', '文生图', '文生视频', '大语言模型', '�
         const borderClass = item.featured ? "border border-blue-500" : "";
 
         return (
-          <div
-            class={cardClasses}
-            x-show="activeCategory === '全部' || activeCategory === '{item.category}'"
-            x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0 transform scale-95"
-            x-transition:enter-end="opacity-100 transform scale-100"
-            x-transition:leave="transition ease-in duration-200"
-            x-transition:leave-start="opacity-100 transform scale-100"
-            x-transition:leave-end="opacity-0 transform scale-95"
-          >
+          <div class={cardClasses}>
             <!-- Spacer -->
             <div class="order-1 w-5/12"></div>
 
@@ -166,20 +140,3 @@ const categories = ['全部', '文生图', '文生视频', '大语言模型', '�
     }
   }
 </style>
-
-<script>
-  // Enhance filter functionality with smooth transitions
-  document.addEventListener('alpine:init', () => {
-    Alpine.data('timelineFilter', () => ({
-      activeCategory: '全部',
-
-      filterItems(category: string) {
-        this.activeCategory = category;
-      },
-
-      isVisible(itemCategory: string) {
-        return this.activeCategory === '全部' || this.activeCategory === itemCategory;
-      }
-    }));
-  });
-</script>
